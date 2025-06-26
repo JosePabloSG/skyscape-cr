@@ -1,0 +1,154 @@
+---
+import Camera from "lucide-static/icons/camera.svg";
+import ArrowRight from "lucide-static/icons/arrow-right.svg";
+import Zap from "lucide-static/icons/zap.svg";
+---
+
+<div class="min-h-screen bg-[#FDFDFD] relative overflow-hidden">
+  <!-- Elementos decorativos de fondo -->
+  <div
+    class="absolute top-32 right-16 w-24 h-24 bg-[#FF5532]/5 rounded-full blur-2xl"
+  >
+  </div>
+  <div
+    class="absolute bottom-32 left-16 w-32 h-32 bg-[#0F232E]/5 rounded-full blur-2xl"
+  >
+  </div>
+  <div
+    class="absolute top-1/4 right-1/3 w-1 h-1 bg-[#FF5532] rounded-full animate-pulse"
+  >
+  </div>
+  <div
+    class="absolute top-2/3 left-1/4 w-1 h-1 bg-[#872822] rounded-full animate-pulse delay-500"
+  >
+  </div>
+
+  <div class="container mx-auto px-6 py-16 relative z-10">
+    <div class="grid lg:grid-cols-12 gap-16 items-center min-h-screen">
+      <!-- Contenido principal -->
+      <div class="lg:col-span-7 space-y-10">
+        <!-- Badge -->
+        <div
+          class="inline-flex items-center space-x-3 bg-[#FDFDFD] border border-[#D9D9D9] rounded-full px-5 py-3 shadow-sm hover:shadow-md transition-shadow"
+        >
+          <Camera class="w-4 h-4 text-[#FF5532]" />
+          <span class="text-sm font-medium text-[#0F232E]"
+            >Fotografía Aérea Profesional</span
+          >
+        </div>
+
+        <!-- Título -->
+        <div class="space-y-8">
+          <h1
+            class="text-5xl lg:text-6xl font-light leading-tight tracking-tight"
+          >
+            <span class="text-[#0F232E] font-normal">Perspectivas</span><br />
+            <span class="text-[#FF5532] font-semibold">que inspiran</span><br />
+            <span class="text-[#0F232E]/70 text-3xl lg:text-4xl font-light"
+              >desde el cielo</span
+            >
+          </h1>
+          <div class="w-16 h-0.5 bg-[#FF5532] rounded-full"></div>
+        </div>
+
+        <!-- Descripción -->
+        <p
+          class="text-lg text-[#0F232E]/80 leading-relaxed max-w-xl font-light"
+        >
+          Capturamos imágenes aéreas impresionantes que transforman cada
+          proyecto en una experiencia visual única. Explora el mundo desde
+          nuevas alturas con nuestra fotografía profesional con dron.
+        </p>
+
+        <!-- Botones -->
+        <div class="flex flex-col sm:flex-row gap-4 pt-6">
+          <button
+            class="group inline-flex items-center justify-center px-8 py-4 bg-[#FF5532] text-[#FDFDFD] font-medium rounded-xl hover:bg-[#872822] transform hover:scale-[1.02] transition-all duration-300 shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-[#FF5532] focus:ring-offset-2"
+          >
+            Ver Portfolio
+            <ArrowRight
+              class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform"
+            />
+          </button>
+          <button
+            class="inline-flex items-center justify-center px-8 py-4 bg-[#FDFDFD] text-[#0F232E] font-medium rounded-xl border border-[#D9D9D9] hover:bg-[#D9D9D9]/50 hover:shadow-md transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#0F232E] focus:ring-offset-2"
+          >
+            Contactar
+          </button>
+        </div>
+
+        <!-- Estadísticas -->
+        <div class="flex items-center space-x-10 pt-12">
+          <div class="text-center">
+            <div class="text-2xl font-semibold text-[#0F232E]">100m</div>
+            <div class="text-sm text-[#0F232E]/60 font-light">Altura máx.</div>
+          </div>
+          <div class="w-px h-6 bg-[#D9D9D9]"></div>
+          <div class="text-center">
+            <div class="text-2xl font-semibold text-[#0F232E]">4K</div>
+            <div class="text-sm text-[#0F232E]/60 font-light">Video UHD</div>
+          </div>
+          <div class="w-px h-6 bg-[#D9D9D9]"></div>
+          <div class="text-center">
+            <div class="text-2xl font-semibold text-[#0F232E]">24h</div>
+            <div class="text-sm text-[#0F232E]/60 font-light">Entrega</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Imagen -->
+      <div class="lg:col-span-5 relative">
+        <div class="relative">
+          <div
+            class="absolute -top-8 -right-8 w-32 h-32 border border-[#D9D9D9]/30 rounded-full"
+          >
+          </div>
+          <div
+            class="absolute -bottom-8 -left-8 w-24 h-24 border border-[#FF5532]/20 rounded-full"
+          >
+          </div>
+
+          <div
+            class="relative bg-gradient-to-br from-[#D9D9D9]/20 to-[#D9D9D9]/40 rounded-2xl overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-transform duration-500"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1487887235947-a955ef187fcc?w=800&h=600&fit=crop&crop=center"
+              alt="Dron profesional capturando fotografías aéreas"
+              class="w-full h-80 object-cover"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-[#0F232E]/10 to-transparent"
+            >
+            </div>
+            <div
+              class="absolute top-4 right-4 bg-[#FDFDFD]/95 backdrop-blur-sm rounded-full p-3 shadow-lg border border-[#D9D9D9]/30"
+            >
+              <Zap class="w-5 h-5 text-[#FF5532]" />
+            </div>
+          </div>
+
+          <div
+            class="absolute -bottom-6 -left-6 w-28 h-28 bg-[#FDFDFD] rounded-xl shadow-xl overflow-hidden border-2 border-[#FDFDFD] transform -rotate-6 hover:rotate-0 transition-transform duration-300"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=200&h=200&fit=crop&crop=center"
+              alt="Vista aérea paisaje"
+              class="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div
+    class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce"
+  >
+    <div
+      class="w-5 h-8 border border-[#0F232E]/30 rounded-full flex justify-center"
+    >
+      <div class="w-0.5 h-2 bg-[#FF5532] rounded-full mt-2 animate-pulse"></div>
+    </div>
+  </div>
+</div>

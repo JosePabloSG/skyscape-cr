@@ -1,0 +1,267 @@
+---
+import Camera from "lucide-static/icons/camera.svg";
+import Building from "lucide-static/icons/building.svg";
+import Heart from "lucide-static/icons/heart.svg";
+import Monitor from "lucide-static/icons/monitor.svg";
+import Sprout from "lucide-static/icons/sprout.svg";
+import Sparkles from "lucide-static/icons/sparkles.svg";
+import ArrowRight from "lucide-static/icons/arrow-right.svg";
+---
+
+<section class="py-24 bg-[#FDFDFD] relative overflow-hidden">
+  <!-- Elementos decorativos de fondo -->
+  <div
+    class="absolute top-16 left-12 w-32 h-32 bg-[#FF5532]/5 rounded-full blur-3xl"
+  >
+  </div>
+  <div
+    class="absolute bottom-20 right-20 w-40 h-40 bg-[#0F232E]/5 rounded-full blur-3xl"
+  >
+  </div>
+  <div
+    class="absolute top-1/3 right-1/4 w-2 h-2 bg-[#FF5532] rounded-full animate-pulse"
+  >
+  </div>
+  <div
+    class="absolute bottom-1/3 left-1/5 w-1 h-1 bg-[#872822] rounded-full animate-pulse delay-700"
+  >
+  </div>
+
+  <div class="container mx-auto px-6 relative z-10">
+    <!-- Header de la sección -->
+    <div class="text-center mb-20">
+      <div
+        class="inline-flex items-center space-x-3 bg-[#FDFDFD] border border-[#D9D9D9] rounded-full px-6 py-3 shadow-sm hover:shadow-md transition-shadow mb-8"
+      >
+        <Camera class="w-4 h-4 text-[#FF5532]" />
+        <span class="text-sm font-medium text-[#0F232E]"
+          >Nuestros Servicios</span
+        >
+      </div>
+
+      <h2
+        class="text-4xl lg:text-5xl font-light leading-tight tracking-tight mb-6"
+      >
+        <span class="text-[#0F232E] font-normal">Fotografía y Video</span><br />
+        <span class="text-[#FF5532] font-semibold">Aéreo Profesional</span>
+      </h2>
+
+      <div class="w-16 h-0.5 bg-[#FF5532] rounded-full mx-auto mb-8"></div>
+
+      <p
+        class="text-lg text-[#0F232E]/80 leading-relaxed max-w-2xl mx-auto font-light"
+      >
+        Transformamos cada proyecto con perspectivas únicas desde el cielo.
+        Descubre nuestros servicios especializados para diferentes necesidades.
+      </p>
+    </div>
+
+    <!-- Grid de servicios -->
+    <div class="grid lg:grid-cols-3 gap-8">
+      <!-- Servicio 1: Fotografía y Video Profesional -->
+      <div
+        class="group relative bg-[#FDFDFD] border border-[#D9D9D9]/50 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+      >
+        <!-- Elemento decorativo superior -->
+        <div
+          class="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-br from-[#FF5532]/10 to-[#FF5532]/20 rounded-full blur-xl group-hover:scale-110 transition-transform duration-500"
+        >
+        </div>
+
+        <!-- Icono principal -->
+        <div
+          class="relative bg-gradient-to-br from-[#FF5532] to-[#872822] rounded-2xl p-4 w-16 h-16 mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300"
+        >
+          <Camera class="w-8 h-8 text-[#FDFDFD]" />
+          <div
+            class="absolute -top-1 -right-1 w-4 h-4 bg-[#FDFDFD] rounded-full flex items-center justify-center"
+          >
+            <Sparkles class="w-2 h-2 text-[#FF5532]" />
+          </div>
+        </div>
+
+        <!-- Contenido -->
+        <h3 class="text-xl font-semibold text-[#0F232E] mb-4">
+          Fotografía y Video Aéreo Profesional
+        </h3>
+
+        <p class="text-[#0F232E]/70 leading-relaxed mb-6 font-light">
+          Ideal para proyectos de marketing, publicidad o capturas
+          impresionantes para redes sociales. Ofrecemos imágenes y videos de
+          alta calidad desde perspectivas únicas.
+        </p>
+
+        <!-- Características -->
+        <div class="space-y-2 mb-6">
+          <div class="flex items-center space-x-2">
+            <div class="w-1.5 h-1.5 bg-[#FF5532] rounded-full"></div>
+            <span class="text-sm text-[#0F232E]/60">Resolución 4K UHD</span>
+          </div>
+          <div class="flex items-center space-x-2">
+            <div class="w-1.5 h-1.5 bg-[#FF5532] rounded-full"></div>
+            <span class="text-sm text-[#0F232E]/60"
+              >Edición profesional incluida</span
+            >
+          </div>
+          <div class="flex items-center space-x-2">
+            <div class="w-1.5 h-1.5 bg-[#FF5532] rounded-full"></div>
+            <span class="text-sm text-[#0F232E]/60">Entrega en 24-48h</span>
+          </div>
+        </div>
+
+        <!-- Botón de acción -->
+        <button
+          class="group/btn w-full inline-flex items-center justify-center px-6 py-3 bg-[#FDFDFD] text-[#0F232E] font-medium rounded-xl border border-[#D9D9D9] hover:bg-[#FF5532] hover:text-[#FDFDFD] hover:border-[#FF5532] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#FF5532] focus:ring-offset-2"
+        >
+          Más información
+          <ArrowRight
+            class="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform"
+          />
+        </button>
+      </div>
+
+      <!-- Servicio 2: Inspección y Monitoreo -->
+      <div
+        class="group relative bg-[#FDFDFD] border border-[#D9D9D9]/50 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+      >
+        <!-- Elemento decorativo superior -->
+        <div
+          class="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-br from-[#0F232E]/10 to-[#0F232E]/20 rounded-full blur-xl group-hover:scale-110 transition-transform duration-500"
+        >
+        </div>
+
+        <!-- Icono principal -->
+        <div
+          class="relative bg-gradient-to-br from-[#0F232E] to-[#0F232E]/80 rounded-2xl p-4 w-16 h-16 mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300"
+        >
+          <Monitor class="w-8 h-8 text-[#FDFDFD]" />
+          <div
+            class="absolute -bottom-1 -right-1 w-6 h-6 bg-[#FF5532] rounded-full flex items-center justify-center"
+          >
+            <Building class="w-3 h-3 text-[#FDFDFD]" />
+          </div>
+        </div>
+
+        <!-- Contenido -->
+        <h3 class="text-xl font-semibold text-[#0F232E] mb-4">
+          Inspección y Monitoreo Aéreo
+        </h3>
+
+        <p class="text-[#0F232E]/70 leading-relaxed mb-6 font-light">
+          Diseñado para industrias como construcción, agricultura o bienes
+          raíces. Incluye inspección de estructuras, monitoreo de cultivos y
+          supervisión de proyectos.
+        </p>
+
+        <!-- Características -->
+        <div class="space-y-2 mb-6">
+          <div class="flex items-center space-x-2">
+            <div class="w-1.5 h-1.5 bg-[#0F232E] rounded-full"></div>
+            <span class="text-sm text-[#0F232E]/60">Informes detallados</span>
+          </div>
+          <div class="flex items-center space-x-2">
+            <div class="w-1.5 h-1.5 bg-[#0F232E] rounded-full"></div>
+            <span class="text-sm text-[#0F232E]/60">Mapeo y mediciones</span>
+          </div>
+          <div class="flex items-center space-x-2">
+            <div class="w-1.5 h-1.5 bg-[#0F232E] rounded-full"></div>
+            <span class="text-sm text-[#0F232E]/60">Análisis termográfico</span>
+          </div>
+        </div>
+
+        <!-- Botón de acción -->
+        <button
+          class="group/btn w-full inline-flex items-center justify-center px-6 py-3 bg-[#FDFDFD] text-[#0F232E] font-medium rounded-xl border border-[#D9D9D9] hover:bg-[#0F232E] hover:text-[#FDFDFD] hover:border-[#0F232E] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#0F232E] focus:ring-offset-2"
+        >
+          Más información
+          <ArrowRight
+            class="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform"
+          />
+        </button>
+      </div>
+
+      <!-- Servicio 3: Bodas y Eventos -->
+      <div
+        class="group relative bg-[#FDFDFD] border border-[#D9D9D9]/50 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+      >
+        <!-- Elemento decorativo superior -->
+        <div
+          class="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-br from-[#872822]/10 to-[#872822]/20 rounded-full blur-xl group-hover:scale-110 transition-transform duration-500"
+        >
+        </div>
+
+        <!-- Icono principal -->
+        <div
+          class="relative bg-gradient-to-br from-[#872822] to-[#FF5532] rounded-2xl p-4 w-16 h-16 mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300"
+        >
+          <Heart class="w-8 h-8 text-[#FDFDFD]" />
+          <div
+            class="absolute -top-1 -left-1 w-4 h-4 bg-[#FDFDFD] rounded-full flex items-center justify-center"
+          >
+            <Sparkles class="w-2 h-2 text-[#872822]" />
+          </div>
+        </div>
+
+        <!-- Contenido -->
+        <h3 class="text-xl font-semibold text-[#0F232E] mb-4">
+          Cobertura Aérea para Bodas y Eventos
+        </h3>
+
+        <p class="text-[#0F232E]/70 leading-relaxed mb-6 font-light">
+          Captura momentos inolvidables con vistas espectaculares. Ideal para
+          bodas, aniversarios o cualquier celebración especial, agregando un
+          toque mágico desde el cielo.
+        </p>
+
+        <!-- Características -->
+        <div class="space-y-2 mb-6">
+          <div class="flex items-center space-x-2">
+            <div class="w-1.5 h-1.5 bg-[#872822] rounded-full"></div>
+            <span class="text-sm text-[#0F232E]/60"
+              >Cobertura completa del evento</span
+            >
+          </div>
+          <div class="flex items-center space-x-2">
+            <div class="w-1.5 h-1.5 bg-[#872822] rounded-full"></div>
+            <span class="text-sm text-[#0F232E]/60"
+              >Video destacado incluido</span
+            >
+          </div>
+          <div class="flex items-center space-x-2">
+            <div class="w-1.5 h-1.5 bg-[#872822] rounded-full"></div>
+            <span class="text-sm text-[#0F232E]/60"
+              >Galería digital personalizada</span
+            >
+          </div>
+        </div>
+
+        <!-- Botón de acción -->
+        <button
+          class="group/btn w-full inline-flex items-center justify-center px-6 py-3 bg-[#FDFDFD] text-[#0F232E] font-medium rounded-xl border border-[#D9D9D9] hover:bg-[#872822] hover:text-[#FDFDFD] hover:border-[#872822] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#872822] focus:ring-offset-2"
+        >
+          Más información
+          <ArrowRight
+            class="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform"
+          />
+        </button>
+      </div>
+    </div>
+
+    <!-- Call to action final -->
+    <div class="text-center mt-16">
+      <div
+        class="inline-flex items-center space-x-4 bg-gradient-to-r from-[#FF5532] to-[#872822] text-[#FDFDFD] rounded-2xl px-8 py-4 shadow-xl hover:shadow-2xl transform hover:scale-[1.02] transition-all duration-300"
+      >
+        <span class="font-medium">¿Tienes un proyecto en mente?</span>
+        <button
+          class="group bg-[#FDFDFD] text-[#0F232E] px-6 py-2 rounded-xl font-medium hover:bg-[#D9D9D9] transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-[#FDFDFD] focus:ring-offset-2 focus:ring-offset-[#FF5532]"
+        >
+          Contáctanos
+          <ArrowRight
+            class="ml-2 w-4 h-4 inline group-hover:translate-x-1 transition-transform"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
