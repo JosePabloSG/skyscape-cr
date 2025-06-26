@@ -1,0 +1,96 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/navigation/Navbar.astro";
+import Footer from "../components/navigation/Footer.astro";
+---
+
+<Layout
+  title="Página No Encontrada - SkyScape CR"
+  description="La página que buscas no existe. Explora nuestros servicios de fotografía aérea profesional en Costa Rica."
+  noindex={true}
+>
+  <Navbar />
+
+  <main class="min-h-screen bg-[#FDFDFD] flex items-center justify-center px-6">
+    <div class="max-w-lg mx-auto text-center">
+      <!-- Error Code -->
+      <div class="mb-8">
+        <h1 class="text-8xl font-bold text-[#FF5532] opacity-20">404</h1>
+      </div>
+
+      <!-- Error Message -->
+      <div class="space-y-6">
+        <h2 class="text-3xl font-semibold text-[#0F232E]">
+          Página no encontrada
+        </h2>
+
+        <p class="text-lg text-[#0F232E]/70 leading-relaxed">
+          Lo sentimos, la página que buscas no existe o ha sido movida. Explora
+          nuestros servicios de fotografía aérea profesional.
+        </p>
+
+        <!-- Action Buttons -->
+        <div class="flex flex-col sm:flex-row gap-4 justify-center pt-6">
+          <a
+            href="/"
+            class="inline-flex items-center justify-center px-8 py-4 bg-[#FF5532] text-[#FDFDFD] font-medium rounded-xl hover:bg-[#872822] transform hover:scale-[1.02] transition-all duration-300 shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-[#FF5532] focus:ring-offset-2"
+          >
+            Volver al inicio
+          </a>
+
+          <a
+            href="/#contacto"
+            class="inline-flex items-center justify-center px-8 py-4 bg-[#FDFDFD] text-[#0F232E] font-medium rounded-xl border border-[#D9D9D9] hover:bg-[#D9D9D9]/50 hover:shadow-md transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#0F232E] focus:ring-offset-2"
+          >
+            Contactanos
+          </a>
+        </div>
+
+        <!-- Popular Links -->
+        <div class="pt-8">
+          <h3 class="text-sm font-medium text-[#0F232E]/60 mb-4">
+            Enlaces populares:
+          </h3>
+          <div class="flex flex-wrap justify-center gap-4 text-sm">
+            <a
+              href="/#servicios"
+              class="text-[#FF5532] hover:text-[#872822] transition-colors"
+            >
+              Servicios
+            </a>
+            <a
+              href="/#galeria"
+              class="text-[#FF5532] hover:text-[#872822] transition-colors"
+            >
+              Galería
+            </a>
+            <a
+              href="/#proceso"
+              class="text-[#FF5532] hover:text-[#872822] transition-colors"
+            >
+              Nuestro Proceso
+            </a>
+            <a
+              href="/#sobre-nosotros"
+              class="text-[#FF5532] hover:text-[#872822] transition-colors"
+            >
+              Sobre Nosotros
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>
+
+<script>
+  // Track 404 errors for analytics (if you have analytics)
+  if (typeof window !== "undefined" && "gtag" in window) {
+    (window as any).gtag("event", "page_view", {
+      page_title: "404 - Page Not Found",
+      page_location: window.location.href,
+    });
+  }
+</script>

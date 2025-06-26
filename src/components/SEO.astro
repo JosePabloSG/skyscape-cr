@@ -1,0 +1,260 @@
+---
+export interface Props {
+  title?: string;
+  description?: string;
+  canonical?: string;
+  image?: string;
+  imageAlt?: string;
+  type?: "website" | "article" | "business";
+  noindex?: boolean;
+  nofollow?: boolean;
+}
+
+const {
+  title = "SkyScape CR - Fotografía Aérea Profesional en Costa Rica",
+  description = "Servicios profesionales de fotografía aérea con drones en Costa Rica. Capturamos perspectivas únicas para inmobiliaria, construcción, eventos y más. Calidad 4K, entrega rápida.",
+  canonical,
+  image = "/og-image.jpg",
+  imageAlt = "SkyScape CR - Fotografía Aérea Profesional",
+  type = "website",
+  noindex = false,
+  nofollow = false,
+} = Astro.props;
+
+const canonicalURL = canonical || new URL(Astro.url.pathname, Astro.site);
+const socialImage = new URL(image, Astro.site);
+
+// Structured Data para Local Business + Organization + WebSite
+const localBusinessData = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: "SkyScape CR",
+  description:
+    "Servicios profesionales de fotografía aérea con drones en Costa Rica",
+  image: socialImage.href,
+  url: Astro.site?.href,
+  telephone: "+506-1234-5678",
+  email: "info@skyscape-cr.com",
+  address: {
+    "@type": "PostalAddress",
+    addressCountry: "CR",
+    addressRegion: "Costa Rica",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: "9.7489",
+    longitude: "-83.7534",
+  },
+  openingHours: ["Mo-Fr 08:00-18:00", "Sa 09:00-14:00"],
+  priceRange: "$$",
+  serviceArea: {
+    "@type": "Country",
+    name: "Costa Rica",
+  },
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Servicios de Fotografía Aérea",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Fotografía Aérea Inmobiliaria",
+          description:
+            "Imágenes aéreas profesionales para propiedades inmobiliarias",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Fotografía Aérea de Construcción",
+          description: "Monitoreo y documentación de proyectos de construcción",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Fotografía Aérea de Eventos",
+          description:
+            "Cobertura aérea profesional para bodas y eventos especiales",
+        },
+      },
+    ],
+  },
+  sameAs: [
+    "https://www.facebook.com/skyscape-cr",
+    "https://www.instagram.com/skyscape_cr",
+    "https://www.linkedin.com/company/skyscape-cr",
+  ],
+};
+
+// Structured Data for Organization
+const organizationData = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "SkyScape CR",
+  url: Astro.site?.href,
+  logo: new URL("/favicon.svg", Astro.site).href,
+  image: socialImage.href,
+  description:
+    "Servicios profesionales de fotografía aérea con drones en Costa Rica",
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: "+506-1234-5678",
+    contactType: "customer service",
+    availableLanguage: ["Spanish"],
+  },
+  areaServed: "Costa Rica",
+  founder: "SkyScape CR Team",
+};
+
+// Structured Data for WebSite with search action
+const websiteData = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "SkyScape CR",
+  url: Astro.site?.href,
+  description:
+    "Servicios profesionales de fotografía aérea con drones en Costa Rica",
+  inLanguage: "es",
+  copyrightYear: new Date().getFullYear(),
+  author: {
+    "@type": "Organization",
+    name: "SkyScape CR",
+  },
+};
+
+// FAQ Structured Data for common questions
+const faqData = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "¿Qué servicios de fotografía aérea ofrecen?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Ofrecemos fotografía aérea para inmobiliaria, construcción, eventos, inspecciones y marketing. Utilizamos drones profesionales para capturar imágenes y videos de alta calidad.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿En qué zonas de Costa Rica operan?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Prestamos servicios en todo Costa Rica, incluyendo San José, Cartago, Alajuela, Heredia, Puntarenas, Guanacaste y Limón.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Cuánto tiempo toma la entrega de las fotografías?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Entregamos las fotografías editadas en un plazo de 24 horas para proyectos estándar. Para proyectos más complejos, el tiempo puede variar.",
+      },
+    },
+  ],
+};
+---
+
+<!-- Primary Meta Tags -->
+<title>{title}</title>
+<meta name="title" content={title} />
+<meta name="description" content={description} />
+<meta
+  name="robots"
+  content={`${noindex ? "noindex" : "index"}, ${nofollow ? "nofollow" : "follow"}`}
+/>
+<link rel="canonical" href={canonicalURL} />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content={type} />
+<meta property="og:url" content={canonicalURL} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={socialImage} />
+<meta property="og:image:alt" content={imageAlt} />
+<meta property="og:site_name" content="SkyScape CR" />
+<meta property="og:locale" content="es_CR" />
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content={canonicalURL} />
+<meta property="twitter:title" content={title} />
+<meta property="twitter:description" content={description} />
+<meta property="twitter:image" content={socialImage} />
+<meta property="twitter:image:alt" content={imageAlt} />
+
+<!-- Additional SEO Meta Tags -->
+<meta name="author" content="SkyScape CR" />
+<meta name="language" content="Spanish" />
+<meta name="geo.region" content="CR" />
+<meta name="geo.placename" content="Costa Rica" />
+<meta name="geo.position" content="9.7489;-83.7534" />
+<meta name="ICBM" content="9.7489, -83.7534" />
+
+<!-- Business/Local SEO -->
+<meta name="geo.region" content="CR" />
+<meta name="geo.placename" content="Costa Rica" />
+<meta name="business:contact_data:street_address" content="Costa Rica" />
+<meta name="business:contact_data:locality" content="Costa Rica" />
+<meta name="business:contact_data:region" content="Costa Rica" />
+<meta name="business:contact_data:postal_code" content="" />
+<meta name="business:contact_data:country_name" content="Costa Rica" />
+<meta name="business:contact_data:phone_number" content="+506-1234-5678" />
+<meta name="business:contact_data:email" content="info@skyscape-cr.com" />
+
+<!-- Additional SEO Meta Tags -->
+<meta name="rating" content="5" />
+<meta name="distribution" content="global" />
+<meta name="revisit-after" content="7 days" />
+<meta name="classification" content="business" />
+<meta
+  name="category"
+  content="Photography, Aerial Photography, Drone Services"
+/>
+<meta name="coverage" content="Costa Rica" />
+<meta name="target" content="all" />
+<meta name="HandheldFriendly" content="True" />
+<meta name="MobileOptimized" content="320" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta
+  name="apple-mobile-web-app-status-bar-style"
+  content="black-translucent"
+/>
+<meta name="apple-mobile-web-app-title" content="SkyScape CR" />
+
+<!-- Keywords (moderadamente, no spam) -->
+<meta
+  name="keywords"
+  content="fotografía aérea, drones Costa Rica, video aéreo, inmobiliaria aérea, construcción drones, eventos aéreos, fotografía dron profesional, servicios aéreos CR"
+/>
+
+<!-- Structured Data -->
+<script
+  type="application/ld+json"
+  set:html={JSON.stringify(localBusinessData)}
+/>
+<script
+  type="application/ld+json"
+  set:html={JSON.stringify(organizationData)}
+/>
+<script type="application/ld+json" set:html={JSON.stringify(websiteData)} />
+<script type="application/ld+json" set:html={JSON.stringify(faqData)} />
+
+<!-- Favicon and App Icons -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+<link rel="manifest" href="/site.webmanifest" />
+
+<!-- Preconnect to external domains for performance -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preconnect" href="https://images.unsplash.com" />
+
+<!-- DNS Prefetch for better performance -->
+<link rel="dns-prefetch" href="https://formspree.io" />
