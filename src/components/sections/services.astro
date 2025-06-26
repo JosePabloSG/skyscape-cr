@@ -1,5 +1,9 @@
 ---
 import Camera from "lucide-static/icons/camera.svg";
+import { Image } from "astro:assets";
+import photoImg from "../../assets/img/photo.jpg";
+import inspectImg from "../../assets/img/inspect.jpg";
+import eventsImg from "../../assets/img/events.jpg";
 ---
 
 <section id="servicios" class="py-24 bg-[#FDFDFD] relative overflow-hidden">
@@ -58,8 +62,8 @@ import Camera from "lucide-static/icons/camera.svg";
       >
         <!-- Imagen principal que ocupa todo el espacio superior -->
         <div class="relative h-48 overflow-hidden">
-          <img
-            src="/src/assets/img/photo.jpg"
+          <Image
+            src={photoImg}
             alt="Fotografía y Video Aéreo Profesional"
             class="object-cover w-full h-full group-hover:scale-110 transition-transform duration-500"
           />
@@ -107,8 +111,8 @@ import Camera from "lucide-static/icons/camera.svg";
       >
         <!-- Imagen principal que ocupa todo el espacio superior -->
         <div class="relative h-48 overflow-hidden">
-          <img
-            src="/src/assets/img/inspect.jpg"
+          <Image
+            src={inspectImg}
             alt="Inspección y Monitoreo Aéreo"
             class="object-cover w-full h-full group-hover:scale-110 transition-transform duration-500"
           />
@@ -156,8 +160,8 @@ import Camera from "lucide-static/icons/camera.svg";
       >
         <!-- Imagen principal que ocupa todo el espacio superior -->
         <div class="relative h-48 overflow-hidden">
-          <img
-            src="/src/assets/img/events.jpg"
+          <Image
+            src={eventsImg}
             alt="Cobertura Aérea para Bodas y Eventos"
             class="object-cover w-full h-full group-hover:scale-110 transition-transform duration-500"
           />
