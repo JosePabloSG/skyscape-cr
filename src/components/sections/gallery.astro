@@ -3,6 +3,16 @@ import Camera from "lucide-static/icons/camera.svg";
 import Eye from "lucide-static/icons/eye.svg";
 import ZoomIn from "lucide-static/icons/zoom-in.svg";
 import ArrowRight from "lucide-static/icons/arrow-right.svg";
+import { Image } from "astro:assets";
+import heroImg from "../../assets/img/hero.jpg";
+import img1 from "../../assets/img/img-1.jpg";
+import img2 from "../../assets/img/img-2.jpg";
+import img3 from "../../assets/img/img-3.jpg";
+import img4 from "../../assets/img/img-4.jpg";
+import img5 from "../../assets/img/img-5.jpg";
+import img6 from "../../assets/img/img-6.jpg";
+import img7 from "../../assets/img/img-7.jpg";
+import img8 from "../../assets/img/img-8.jpg";
 ---
 
 <section class="py-24 bg-[#FDFDFD] relative overflow-hidden" id="galeria">
@@ -61,14 +71,13 @@ import ArrowRight from "lucide-static/icons/arrow-right.svg";
           class="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 bg-gradient-to-br from-[#D9D9D9]/10 to-[#D9D9D9]/20 cursor-pointer h-80 md:h-full"
           role="button"
           tabindex="0"
-          aria-label="Ver imagen ampliada: Vista aérea panorámica de montañas"
-          onclick="openModal('/src/assets/img/hero.jpg', 'Vista aérea panorámica de montañas y bosques durante el amanecer')"
+          aria-label="Ver imagen ampliada: Vista aérea panorámica de playa blanca, Costa Rica"
+          onclick="openModal('/src/assets/img/hero.jpg', 'Vista aérea panorámica de playa blanca, Costa Rica')"
         >
-          <img
-            src="/src/assets/img/hero.jpg"
-            alt="Vista aérea panorámica de montañas y bosques durante el amanecer"
+          <Image
+            src={heroImg}
+            alt="Vista aérea panorámica de playa blanca, Costa Rica"
             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-            loading="lazy"
           />
           <div
             class="absolute inset-0 bg-gradient-to-t from-[#0F232E]/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
@@ -93,14 +102,13 @@ import ArrowRight from "lucide-static/icons/arrow-right.svg";
           class="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 bg-gradient-to-br from-[#D9D9D9]/10 to-[#D9D9D9]/20 cursor-pointer h-48"
           role="button"
           tabindex="0"
-          aria-label="Ver imagen ampliada: Fotografía aérea de ciudad moderna"
-          onclick="openModal('/src/assets/img/img-1.jpg', 'Vista aérea de ciudad moderna con rascacielos y arquitectura urbana')"
+          aria-label="Ver imagen ampliada: Fotografía aérea de playa Samara, Costa Rica"
+          onclick="openModal('/src/assets/img/img-1.jpg', 'Vista aérea de playa Samara, Costa Rica')"
         >
-          <img
-            src="/src/assets/img/img-1.jpg"
-            alt="Vista aérea de ciudad moderna con rascacielos y arquitectura urbana"
+          <Image
+            src={img1}
+            alt="Vista aérea de playa Samara, Costa Rica"
             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-            loading="lazy"
           />
           <div
             class="absolute inset-0 bg-gradient-to-t from-[#0F232E]/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
@@ -120,14 +128,13 @@ import ArrowRight from "lucide-static/icons/arrow-right.svg";
           class="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 bg-gradient-to-br from-[#D9D9D9]/10 to-[#D9D9D9]/20 cursor-pointer h-48"
           role="button"
           tabindex="0"
-          aria-label="Ver imagen ampliada: Playa tropical desde el aire"
-          onclick="openModal('/src/assets/img/img-2.jpg', 'Vista aérea de playa tropical con aguas cristalinas y arena blanca')"
+          aria-label="Ver imagen ampliada: Playa Samara, Costa Rica"
+          onclick="openModal('/src/assets/img/img-2.jpg', 'Vista aérea de playa Samara, Costa Rica')"
         >
-          <img
-            src="/src/assets/img/img-2.jpg"
-            alt="Vista aérea de playa tropical con aguas cristalinas y arena blanca"
+          <Image
+            src={img2}
+            alt="Vista aérea de playa Samara, Costa Rica"
             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-            loading="lazy"
           />
           <div
             class="absolute inset-0 bg-gradient-to-t from-[#0F232E]/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
@@ -147,14 +154,13 @@ import ArrowRight from "lucide-static/icons/arrow-right.svg";
           class="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 bg-gradient-to-br from-[#D9D9D9]/10 to-[#D9D9D9]/20 cursor-pointer h-48"
           role="button"
           tabindex="0"
-          aria-label="Ver imagen ampliada: Campos agrícolas vistos desde drone"
-          onclick="openModal('/src/assets/img/img-3.jpg', 'Vista aérea de campos agrícolas con patrones geométricos verdes')"
+          aria-label="Ver imagen ampliada: Four Seasons, Costa Rica"
+          onclick="openModal('/src/assets/img/img-3.jpg', 'Vista aérea de Four Seasons, Costa Rica')"
         >
-          <img
-            src="/src/assets/img/img-3.jpg"
-            alt="Vista aérea de campos agrícolas con patrones geométricos verdes"
+          <Image
+            src={img3}
+            alt="Vista aérea de Four Seasons, Costa Rica"
             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-            loading="lazy"
           />
           <div
             class="absolute inset-0 bg-gradient-to-t from-[#0F232E]/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
@@ -174,14 +180,13 @@ import ArrowRight from "lucide-static/icons/arrow-right.svg";
           class="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 bg-gradient-to-br from-[#D9D9D9]/10 to-[#D9D9D9]/20 cursor-pointer h-48"
           role="button"
           tabindex="0"
-          aria-label="Ver imagen ampliada: Arquitectura moderna desde el aire"
-          onclick="openModal('/src/assets/img/img-4.jpg', 'Vista aérea de edificio moderno con diseño arquitectónico único')"
+          aria-label="Ver imagen ampliada: Playa Virador, Costa Rica"
+          onclick="openModal('/src/assets/img/img-4.jpg', 'Vista aérea de playa Virador, Costa Rica')"
         >
-          <img
-            src="/src/assets/img/img-4.jpg"
-            alt="Vista aérea de edificio moderno con diseño arquitectónico único"
+          <Image
+            src={img4}
+            alt="Vista aérea de playa Virador, Costa Rica"
             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-            loading="lazy"
           />
           <div
             class="absolute inset-0 bg-gradient-to-t from-[#0F232E]/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
@@ -201,14 +206,13 @@ import ArrowRight from "lucide-static/icons/arrow-right.svg";
           class="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 bg-gradient-to-br from-[#D9D9D9]/10 to-[#D9D9D9]/20 cursor-pointer h-48"
           role="button"
           tabindex="0"
-          aria-label="Ver imagen ampliada: Río serpenteante en paisaje natural"
-          onclick="openModal('/src/assets/img/img-5.jpg', 'Vista aérea de río serpenteante atravesando bosque verde')"
+          aria-label="Ver imagen ampliada: Dino Land-Río Agrio, Costa Rica"
+          onclick="openModal('/src/assets/img/img-5.jpg', 'Vista aérea de Mirador de Dino Land-Río Agrio, Costa Rica')"
         >
-          <img
-            src="/src/assets/img/img-5.jpg"
-            alt="Vista aérea de río serpenteante atravesando bosque verde"
+          <Image
+            src={img5}
+            alt="Vista aérea de Mirador de Dino Land-Río Agrio, Costa Rica"
             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-            loading="lazy"
           />
           <div
             class="absolute inset-0 bg-gradient-to-t from-[#0F232E]/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
@@ -228,14 +232,13 @@ import ArrowRight from "lucide-static/icons/arrow-right.svg";
           class="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 bg-gradient-to-br from-[#D9D9D9]/10 to-[#D9D9D9]/20 cursor-pointer h-48"
           role="button"
           tabindex="0"
-          aria-label="Ver imagen ampliada: Marina con yates desde el aire"
-          onclick="openModal('/src/assets/img/img-6.jpg', 'Vista aérea de marina con yates y embarcaciones en aguas azules')"
+          aria-label="Ver imagen ampliada: Catarata Río Agrio, Costa Rica"
+          onclick="openModal('/src/assets/img/img-6.jpg', 'Vista aérea de Catarata Río Agrio, Costa Rica')"
         >
-          <img
-            src="/src/assets/img/img-6.jpg"
-            alt="Vista aérea de marina con yates y embarcaciones en aguas azules"
+          <Image
+            src={img6}
+            alt="Vista aérea de Catarata Río Agrio, Costa Rica"
             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-            loading="lazy"
           />
           <div
             class="absolute inset-0 bg-gradient-to-t from-[#0F232E]/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
@@ -255,14 +258,13 @@ import ArrowRight from "lucide-static/icons/arrow-right.svg";
           class="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 bg-gradient-to-br from-[#D9D9D9]/10 to-[#D9D9D9]/20 cursor-pointer h-48"
           role="button"
           tabindex="0"
-          aria-label="Ver imagen ampliada: Evento de boda en jardín exterior"
-          onclick="openModal('/src/assets/img/img-7.jpg', 'Vista aérea de evento de boda en jardín con decoración elegante')"
+          aria-label="Ver imagen ampliada: Universidad Nacional, Campus Nicoya"
+          onclick="openModal('/src/assets/img/img-7.jpg', 'Vista aérea de Universidad Nacional, Campus Nicoya')"
         >
-          <img
-            src="/src/assets/img/img-7.jpg"
-            alt="Vista aérea de evento de boda en jardín con decoración elegante"
+          <Image
+            src={img7}
+            alt="Vista aérea de Universidad Nacional, Campus Nicoya"
             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-            loading="lazy"
           />
           <div
             class="absolute inset-0 bg-gradient-to-t from-[#0F232E]/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
@@ -282,14 +284,13 @@ import ArrowRight from "lucide-static/icons/arrow-right.svg";
           class="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 bg-gradient-to-br from-[#D9D9D9]/10 to-[#D9D9D9]/20 cursor-pointer h-48"
           role="button"
           tabindex="0"
-          aria-label="Ver imagen ampliada: Construcción industrial desde el aire"
-          onclick="openModal('/src/assets/img/img-8.jpg', 'Vista aérea de sitio de construcción industrial con maquinaria')"
+          aria-label="Ver imagen ampliada: Universidad Nacional, Campus Nicoya"
+          onclick="openModal('/src/assets/img/img-8.jpg', 'Vista aérea de Universidad Nacional, Campus Nicoya')"
         >
-          <img
-            src="/src/assets/img/img-8.jpg"
-            alt="Vista aérea de sitio de construcción industrial con maquinaria"
+          <Image
+            src={img8}
+            alt="Vista aérea de Universidad Nacional, Campus Nicoya"
             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-            loading="lazy"
           />
           <div
             class="absolute inset-0 bg-gradient-to-t from-[#0F232E]/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"

@@ -1,5 +1,5 @@
 ---
-import Camera from "lucide-static/icons/camera.svg";
+import { Image } from "astro:assets";
 import Menu from "lucide-static/icons/menu.svg";
 import X from "lucide-static/icons/x.svg";
 ---
@@ -35,11 +35,8 @@ import X from "lucide-static/icons/x.svg";
         href="#inicio"
         class="flex items-center space-x-3 group transition-all duration-300 hover:scale-105"
       >
-        <div
-          class="bg-[#FF5532]/95 backdrop-blur-sm rounded-3xl p-3 shadow-xl group-hover:shadow-2xl transition-all duration-300 group-hover:bg-[#FF5532] border border-[#FF5532]/20"
-        >
-          <Camera class="w-6 h-6 text-white" />
-        </div>
+     
+          <Image src="/src/assets/img/logo.png" alt="SkyScape CR" width={64} height={64} />
         <div class="hidden sm:block">
           <span
             class="text-xl font-bold text-[#0F232E] group-hover:text-[#FF5532] transition-colors duration-300"

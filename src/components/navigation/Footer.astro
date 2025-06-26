@@ -7,6 +7,8 @@ import Instagram from "lucide-static/icons/instagram.svg";
 import Facebook from "lucide-static/icons/facebook.svg";
 import Twitter from "lucide-static/icons/twitter.svg";
 import ArrowUp from "lucide-static/icons/arrow-up.svg";
+import { Image } from "astro:assets";
+import logo from "../../assets/img/logo.jpeg";
 ---
 
 <footer class="bg-[#0F232E] text-[#FDFDFD] relative overflow-hidden">
@@ -34,10 +36,12 @@ import ArrowUp from "lucide-static/icons/arrow-up.svg";
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
         <!-- Logo y descripción -->
         <div class="lg:col-span-2">
-          <div class="flex items-center space-x-3 mb-6">
-            <div class="bg-[#FF5532] rounded-xl p-3">
-              <Camera class="w-6 h-6 text-[#FDFDFD]" />
-            </div>
+          <div class="flex items-center space-x-3 mb-6 rounded-3xl">
+            <Image
+              src={logo}
+              alt="SkyScape CR"
+              class="w-10 h-10 rounded-xl"
+            />
             <div>
               <h3 class="text-xl font-bold text-[#FDFDFD]">SkyScape CR</h3>
               <p class="text-sm text-[#FDFDFD]/70">Fotografía Aérea</p>
@@ -48,37 +52,6 @@ import ArrowUp from "lucide-static/icons/arrow-up.svg";
             de vanguardia y creatividad profesional. Tu visión, nuestra
             perspectiva aérea.
           </p>
-
-          <!-- Redes sociales -->
-          <div class="flex space-x-4">
-            <a
-              href="#"
-              class="bg-[#FDFDFD]/10 hover:bg-[#FF5532] rounded-lg p-2 transition-colors duration-300 group"
-              aria-label="Instagram"
-            >
-              <Instagram
-                class="w-5 h-5 text-[#FDFDFD]/70 group-hover:text-[#FDFDFD]"
-              />
-            </a>
-            <a
-              href="#"
-              class="bg-[#FDFDFD]/10 hover:bg-[#FF5532] rounded-lg p-2 transition-colors duration-300 group"
-              aria-label="Facebook"
-            >
-              <Facebook
-                class="w-5 h-5 text-[#FDFDFD]/70 group-hover:text-[#FDFDFD]"
-              />
-            </a>
-            <a
-              href="#"
-              class="bg-[#FDFDFD]/10 hover:bg-[#FF5532] rounded-lg p-2 transition-colors duration-300 group"
-              aria-label="Twitter"
-            >
-              <Twitter
-                class="w-5 h-5 text-[#FDFDFD]/70 group-hover:text-[#FDFDFD]"
-              />
-            </a>
-          </div>
         </div>
 
         <!-- Enlaces rápidos -->
@@ -149,10 +122,10 @@ import ArrowUp from "lucide-static/icons/arrow-up.svg";
               <div>
                 <p class="text-sm font-medium text-[#FDFDFD]">Email</p>
                 <a
-                  href="mailto:info@skyscape-cr.com"
+                  href="mailto:suarezgomezjosepablo03@gmail.com"
                   class="text-[#FDFDFD]/70 hover:text-[#FF5532] transition-colors duration-300 font-light text-sm"
                 >
-                  info@skyscape-cr.com
+                  suarezgomezjosepablo03@gmail.com
                 </a>
               </div>
             </div>
@@ -164,10 +137,10 @@ import ArrowUp from "lucide-static/icons/arrow-up.svg";
               <div>
                 <p class="text-sm font-medium text-[#FDFDFD]">Teléfono</p>
                 <a
-                  href="tel:+50612345678"
+                  href="tel:+50664251906"
                   class="text-[#FDFDFD]/70 hover:text-[#FF5532] transition-colors duration-300 font-light text-sm"
                 >
-                  +506 1234-5678
+                  +506 64251906
                 </a>
               </div>
             </div>

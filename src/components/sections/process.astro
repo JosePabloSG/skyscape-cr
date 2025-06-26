@@ -6,6 +6,11 @@ import Package from "lucide-static/icons/package.svg";
 import Check from "lucide-static/icons/check.svg";
 import Zap from "lucide-static/icons/zap.svg";
 import ArrowRight from "lucide-static/icons/arrow-right.svg";
+import { Image } from "astro:assets";
+import photoImg from "../../assets/img/photo.jpg";
+import inspectImg from "../../assets/img/inspect.jpg";
+import eventsImg from "../../assets/img/events.jpg";
+import img1 from "../../assets/img/img-1.jpg";
 ---
 
 <section class="py-24 bg-[#FDFDFD] relative overflow-hidden" id="proceso">
@@ -111,24 +116,9 @@ import ArrowRight from "lucide-static/icons/arrow-right.svg";
         </div>
 
         <!-- Imagen -->
-        <div class="lg:col-span-5 order-1 lg:order-2">
-          <div class="relative">
-            <div
-              class="relative bg-[#F8F8F8] rounded-2xl overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-transform duration-500"
-            >
-              <img
-                src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop&crop=center"
-                alt="Reunión de consulta inicial para proyecto de fotografía aérea"
-                class="w-full h-64 lg:h-80 object-cover"
-                loading="lazy"
-              />
-              <div class="absolute inset-0 bg-[#0F232E]/10"></div>
-              <div
-                class="absolute top-4 right-4 bg-[#FDFDFD]/95 backdrop-blur-sm rounded-full p-3 shadow-lg border border-[#D9D9D9]/30"
-              >
-                <MessageCircle class="w-5 h-5 text-[#FF5532]" />
-              </div>
-            </div>
+        <div class="lg:col-span-5 order-1 lg:order-2 flex items-center justify-center">
+          <div class="relative bg-[#F8F8F8] rounded-2xl shadow-2xl flex items-center justify-center w-48 h-48 mx-auto">
+            <MessageCircle class="w-20 h-20 text-[#FF5532]" />
           </div>
         </div>
       </div>
@@ -140,24 +130,9 @@ import ArrowRight from "lucide-static/icons/arrow-right.svg";
 
       <!-- Paso 2: Planificación -->
       <div class="grid lg:grid-cols-12 gap-12 items-center">
-        <div class="lg:col-span-5">
-          <div class="relative">
-            <div
-              class="relative bg-[#F8F8F8] rounded-2xl overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-transform duration-500"
-            >
-              <img
-                src="https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?w=600&h=400&fit=crop&crop=center"
-                alt="Planificación estratégica de vuelo de dron con mapas y tecnología"
-                class="w-full h-64 lg:h-80 object-cover"
-                loading="lazy"
-              />
-              <div class="absolute inset-0 bg-[#0F232E]/10"></div>
-              <div
-                class="absolute top-4 right-4 bg-[#FDFDFD]/95 backdrop-blur-sm rounded-full p-3 shadow-lg border border-[#D9D9D9]/30"
-              >
-                <Calendar class="w-5 h-5 text-[#FF5532]" />
-              </div>
-            </div>
+        <div class="lg:col-span-5 flex items-center justify-center">
+          <div class="relative bg-[#F8F8F8] rounded-2xl shadow-2xl flex items-center justify-center w-48 h-48 mx-auto">
+            <Calendar class="w-20 h-20 text-[#0F232E]" />
           </div>
         </div>
 
@@ -285,24 +260,9 @@ import ArrowRight from "lucide-static/icons/arrow-right.svg";
         </div>
 
         <!-- Imagen -->
-        <div class="lg:col-span-5 order-1 lg:order-2">
-          <div class="relative">
-            <div
-              class="relative bg-[#F8F8F8] rounded-2xl overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-transform duration-500"
-            >
-              <img
-                src="https://images.unsplash.com/photo-1473968512647-3e447244af8f?w=600&h=400&fit=crop&crop=center"
-                alt="Dron profesional capturando fotografías aéreas en acción"
-                class="w-full h-64 lg:h-80 object-cover"
-                loading="lazy"
-              />
-              <div class="absolute inset-0 bg-[#0F232E]/10"></div>
-              <div
-                class="absolute top-4 right-4 bg-[#FDFDFD]/95 backdrop-blur-sm rounded-full p-3 shadow-lg border border-[#D9D9D9]/30"
-              >
-                <Camera class="w-5 h-5 text-[#872822]" />
-              </div>
-            </div>
+        <div class="lg:col-span-5 order-1 lg:order-2 flex items-center justify-center">
+          <div class="relative bg-[#F8F8F8] rounded-2xl shadow-2xl flex items-center justify-center w-48 h-48 mx-auto">
+            <Camera class="w-20 h-20 text-[#872822]" />
           </div>
         </div>
       </div>
@@ -314,24 +274,9 @@ import ArrowRight from "lucide-static/icons/arrow-right.svg";
 
       <!-- Paso 4: Entrega -->
       <div class="grid lg:grid-cols-12 gap-12 items-center">
-        <div class="lg:col-span-5">
-          <div class="relative">
-            <div
-              class="relative bg-[#F8F8F8] rounded-2xl overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-transform duration-500"
-            >
-              <img
-                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop&crop=center"
-                alt="Entrega profesional de archivos digitales editados"
-                class="w-full h-64 lg:h-80 object-cover"
-                loading="lazy"
-              />
-              <div class="absolute inset-0 bg-[#0F232E]/10"></div>
-              <div
-                class="absolute top-4 right-4 bg-[#FDFDFD]/95 backdrop-blur-sm rounded-full p-3 shadow-lg border border-[#D9D9D9]/30"
-              >
-                <Package class="w-5 h-5 text-[#FF5532]" />
-              </div>
-            </div>
+        <div class="lg:col-span-5 flex items-center justify-center">
+          <div class="relative bg-[#F8F8F8] rounded-2xl shadow-2xl flex items-center justify-center w-48 h-48 mx-auto">
+            <Package class="w-20 h-20 text-[#FF5532]" />
           </div>
         </div>
 
