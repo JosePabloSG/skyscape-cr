@@ -1,26 +1,148 @@
 ---
 import "../styles/global.css";
+import SEO from "../components/SEO.astro";
+
+export interface Props {
+  title?: string;
+  description?: string;
+  canonical?: string;
+  image?: string;
+  imageAlt?: string;
+  type?: "website" | "article" | "business";
+  noindex?: boolean;
+  nofollow?: boolean;
+}
+
+const {
+  title,
+  description,
+  canonical,
+  image,
+  imageAlt,
+  type,
+  noindex,
+  nofollow,
+} = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="theme-color" content="#0F232E" />
+    <meta name="color-scheme" content="light" />
+
+    <!-- Preconnect to critical domains for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="dns-prefetch" href="https://formspree.io" />
+
+    <SEO
+      title={title}
+      description={description}
+      canonical={canonical}
+      image={image}
+      imageAlt={imageAlt}
+      type={type}
+      noindex={noindex}
+      nofollow={nofollow}
+    />
+
+    <!-- Performance optimizations -->
+    <link rel="preload" href="/src/styles/global.css" as="style" />
+    <link
+      rel="preload"
+      as="image"
+      href="/src/assets/background.svg"
+      fetchpriority="high"
+    />
+    <script src="/js/image-optimization.js" defer></script>
+
+    <!-- Critical CSS inline for faster rendering -->
+    <style>
+      /* Critical above-the-fold styles */
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        font-family:
+          system-ui,
+          -apple-system,
+          sans-serif;
+      }
+      .hero-section {
+        min-height: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <slot />
+
+    <!-- Performance monitoring and Web Vitals -->
+    <script>
+      // Web Vitals monitoring
+      if ("PerformanceObserver" in window) {
+        // Largest Contentful Paint (LCP)
+        const lcpObserver = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            console.log("LCP:", entry.startTime);
+          }
+        });
+        lcpObserver.observe({ entryTypes: ["largest-contentful-paint"] });
+
+        // First Input Delay (FID)
+        const fidObserver = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            const fidEntry = entry as any;
+            if (fidEntry.processingStart) {
+              console.log(
+                "FID:",
+                fidEntry.processingStart - fidEntry.startTime
+              );
+            }
+          }
+        });
+        fidObserver.observe({ entryTypes: ["first-input"] });
+
+        // Cumulative Layout Shift (CLS)
+        let clsScore = 0;
+        const clsObserver = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            const clsEntry = entry as any;
+            if (!clsEntry.hadRecentInput && clsEntry.value) {
+              clsScore += clsEntry.value;
+            }
+          }
+          console.log("CLS:", clsScore);
+        });
+        clsObserver.observe({ entryTypes: ["layout-shift"] });
+      }
+
+      // Service Worker registration for offline capabilities (optional)
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("/sw.js").catch(() => {
+            // Service worker not available, continue normally
+          });
+        });
+      }
+    </script>
+  </body>
 </html>
 
 <style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
+  html,
+  body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
 </style>

@@ -9,12 +9,46 @@ import Footer from "../components/navigation/Footer.astro";
 import Navbar from "../components/navigation/Navbar.astro";
 import Layout from "../layouts/Layout.astro";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+// SEO optimized data for the homepage
+const pageTitle =
+  "SkyScape CR - Fotografía Aérea Profesional en Costa Rica | Drones 4K";
+const pageDescription =
+  "Servicios profesionales de fotografía y video aéreo con drones en Costa Rica. Especialistas en inmobiliaria, construcción, eventos y inspecciones. Calidad 4K, entrega en 24h. ¡Contáctanos!";
+const pageImage = "/og-home.jpg";
 ---
 
-<Layout>
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  image={pageImage}
+  type="website"
+>
   <Navbar />
+
+  <!-- Schema.org structured data for better SEO -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "SkyScape CR",
+      "alternateName": "SkyScape Costa Rica",
+      "url": "https://skyscape-cr.com",
+      "logo": "https://skyscape-cr.com/logo.png",
+      "sameAs": [
+        "https://www.facebook.com/skyscape-cr",
+        "https://www.instagram.com/skyscape_cr",
+        "https://www.linkedin.com/company/skyscape-cr"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+506-1234-5678",
+        "contactType": "customer service",
+        "email": "info@skyscape-cr.com",
+        "availableLanguage": ["Spanish", "English"]
+      }
+    }
+  </script>
+
   <Hero />
   <Services />
   <Gallery />

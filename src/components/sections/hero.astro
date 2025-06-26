@@ -126,6 +126,11 @@ import HeroBgImage from "../../assets/img/hero.jpg";
               alt="Dron profesional capturando fotografías aéreas"
               class="w-full h-auto object-contain bg-gradient-to-br from-[#F8F8F8] to-[#FDFDFD]"
               style="min-height: 280px;"
+              loading="eager"
+              decoding="async"
+              width="600"
+              height="400"
+              fetchpriority="high"
             />
             <div
               class="absolute inset-0 bg-gradient-to-t from-[#0F232E]/5 to-transparent pointer-events-none"
@@ -144,7 +149,12 @@ import HeroBgImage from "../../assets/img/hero.jpg";
             <Image
               src={HeroBgImage}
               alt="Vista aérea paisaje"
+
               class="w-full h-full object-cover"
+              loading="lazy"
+              decoding="async"
+              width="112"
+              height="112"
             />
           </div>
         </div>
