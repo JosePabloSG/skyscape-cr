@@ -1,0 +1,410 @@
+---
+import Camera from "lucide-static/icons/camera.svg";
+import Eye from "lucide-static/icons/eye.svg";
+import ZoomIn from "lucide-static/icons/zoom-in.svg";
+import ArrowRight from "lucide-static/icons/arrow-right.svg";
+---
+
+<section class="py-24 bg-[#FDFDFD] relative overflow-hidden" id="galeria">
+  <!-- Elementos decorativos de fondo -->
+  <div
+    class="absolute top-20 right-16 w-40 h-40 bg-[#FF5532]/5 rounded-full blur-3xl"
+  >
+  </div>
+  <div
+    class="absolute bottom-32 left-12 w-32 h-32 bg-[#0F232E]/5 rounded-full blur-3xl"
+  >
+  </div>
+  <div
+    class="absolute top-1/2 left-1/4 w-2 h-2 bg-[#FF5532] rounded-full animate-pulse opacity-60"
+  >
+  </div>
+  <div
+    class="absolute top-1/3 right-1/3 w-1 h-1 bg-[#872822] rounded-full animate-pulse delay-1000 opacity-80"
+  >
+  </div>
+
+  <div class="container mx-auto px-6 relative z-10">
+    <!-- Header de la sección -->
+    <div class="text-center mb-16">
+      <div
+        class="inline-flex items-center space-x-3 bg-[#FDFDFD] border border-[#D9D9D9] rounded-full px-6 py-3 shadow-sm hover:shadow-md transition-shadow mb-8"
+      >
+        <Camera class="w-4 h-4 text-[#FF5532]" />
+        <span class="text-sm font-medium text-[#0F232E]">Galería</span>
+      </div>
+
+      <h2
+        class="text-4xl lg:text-5xl font-light leading-tight tracking-tight mb-6"
+      >
+        <span class="text-[#0F232E] font-normal">Perspectivas</span><br />
+        <span class="text-[#FF5532] font-semibold">Únicas</span>
+      </h2>
+
+      <div class="w-16 h-0.5 bg-[#FF5532] rounded-full mx-auto mb-8"></div>
+
+      <p
+        class="text-lg text-[#0F232E]/80 leading-relaxed max-w-2xl mx-auto font-light"
+      >
+        Explora nuestro portfolio de fotografías aéreas. Cada imagen cuenta una
+        historia desde una perspectiva completamente nueva.
+      </p>
+    </div>
+
+    <!-- Galería principal -->
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-12"
+    >
+      <!-- Imagen destacada grande (ocupa 2x2) -->
+      <div class="md:col-span-2 md:row-span-2 group">
+        <div
+          class="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 bg-gradient-to-br from-[#D9D9D9]/10 to-[#D9D9D9]/20 cursor-pointer h-80 md:h-full"
+          role="button"
+          tabindex="0"
+          aria-label="Ver imagen ampliada: Vista aérea panorámica de montañas"
+          onclick="openModal('/src/assets/img/hero.jpg', 'Vista aérea panorámica de montañas y bosques durante el amanecer')"
+        >
+          <img
+            src="/src/assets/img/hero.jpg"
+            alt="Vista aérea panorámica de montañas y bosques durante el amanecer"
+            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+            loading="lazy"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-[#0F232E]/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+          </div>
+          <div
+            class="absolute top-4 left-4 bg-[#FF5532] text-[#FDFDFD] text-xs font-medium px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            Destacada
+          </div>
+          <div
+            class="absolute bottom-4 right-4 bg-[#FDFDFD]/95 backdrop-blur-sm rounded-full p-3 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            <ZoomIn class="w-5 h-5 text-[#0F232E]" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Imagen 2 -->
+      <div class="group">
+        <div
+          class="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 bg-gradient-to-br from-[#D9D9D9]/10 to-[#D9D9D9]/20 cursor-pointer h-48"
+          role="button"
+          tabindex="0"
+          aria-label="Ver imagen ampliada: Fotografía aérea de ciudad moderna"
+          onclick="openModal('/src/assets/img/img-1.jpg', 'Vista aérea de ciudad moderna con rascacielos y arquitectura urbana')"
+        >
+          <img
+            src="/src/assets/img/img-1.jpg"
+            alt="Vista aérea de ciudad moderna con rascacielos y arquitectura urbana"
+            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+            loading="lazy"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-[#0F232E]/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+          </div>
+          <div
+            class="absolute bottom-3 right-3 bg-[#FDFDFD]/95 backdrop-blur-sm rounded-full p-2 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            <Eye class="w-4 h-4 text-[#0F232E]" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Imagen 3 -->
+      <div class="group">
+        <div
+          class="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 bg-gradient-to-br from-[#D9D9D9]/10 to-[#D9D9D9]/20 cursor-pointer h-48"
+          role="button"
+          tabindex="0"
+          aria-label="Ver imagen ampliada: Playa tropical desde el aire"
+          onclick="openModal('/src/assets/img/img-2.jpg', 'Vista aérea de playa tropical con aguas cristalinas y arena blanca')"
+        >
+          <img
+            src="/src/assets/img/img-2.jpg"
+            alt="Vista aérea de playa tropical con aguas cristalinas y arena blanca"
+            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+            loading="lazy"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-[#0F232E]/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+          </div>
+          <div
+            class="absolute bottom-3 right-3 bg-[#FDFDFD]/95 backdrop-blur-sm rounded-full p-2 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            <Eye class="w-4 h-4 text-[#0F232E]" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Imagen 4 -->
+      <div class="group">
+        <div
+          class="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 bg-gradient-to-br from-[#D9D9D9]/10 to-[#D9D9D9]/20 cursor-pointer h-48"
+          role="button"
+          tabindex="0"
+          aria-label="Ver imagen ampliada: Campos agrícolas vistos desde drone"
+          onclick="openModal('/src/assets/img/img-3.jpg', 'Vista aérea de campos agrícolas con patrones geométricos verdes')"
+        >
+          <img
+            src="/src/assets/img/img-3.jpg"
+            alt="Vista aérea de campos agrícolas con patrones geométricos verdes"
+            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+            loading="lazy"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-[#0F232E]/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+          </div>
+          <div
+            class="absolute bottom-3 right-3 bg-[#FDFDFD]/95 backdrop-blur-sm rounded-full p-2 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            <Eye class="w-4 h-4 text-[#0F232E]" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Imagen 5 -->
+      <div class="group">
+        <div
+          class="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 bg-gradient-to-br from-[#D9D9D9]/10 to-[#D9D9D9]/20 cursor-pointer h-48"
+          role="button"
+          tabindex="0"
+          aria-label="Ver imagen ampliada: Arquitectura moderna desde el aire"
+          onclick="openModal('/src/assets/img/img-4.jpg', 'Vista aérea de edificio moderno con diseño arquitectónico único')"
+        >
+          <img
+            src="/src/assets/img/img-4.jpg"
+            alt="Vista aérea de edificio moderno con diseño arquitectónico único"
+            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+            loading="lazy"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-[#0F232E]/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+          </div>
+          <div
+            class="absolute bottom-3 right-3 bg-[#FDFDFD]/95 backdrop-blur-sm rounded-full p-2 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            <Eye class="w-4 h-4 text-[#0F232E]" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Imagen 6 -->
+      <div class="group">
+        <div
+          class="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 bg-gradient-to-br from-[#D9D9D9]/10 to-[#D9D9D9]/20 cursor-pointer h-48"
+          role="button"
+          tabindex="0"
+          aria-label="Ver imagen ampliada: Río serpenteante en paisaje natural"
+          onclick="openModal('/src/assets/img/img-5.jpg', 'Vista aérea de río serpenteante atravesando bosque verde')"
+        >
+          <img
+            src="/src/assets/img/img-5.jpg"
+            alt="Vista aérea de río serpenteante atravesando bosque verde"
+            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+            loading="lazy"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-[#0F232E]/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+          </div>
+          <div
+            class="absolute bottom-3 right-3 bg-[#FDFDFD]/95 backdrop-blur-sm rounded-full p-2 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            <Eye class="w-4 h-4 text-[#0F232E]" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Imagen 7 -->
+      <div class="group">
+        <div
+          class="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 bg-gradient-to-br from-[#D9D9D9]/10 to-[#D9D9D9]/20 cursor-pointer h-48"
+          role="button"
+          tabindex="0"
+          aria-label="Ver imagen ampliada: Marina con yates desde el aire"
+          onclick="openModal('/src/assets/img/img-6.jpg', 'Vista aérea de marina con yates y embarcaciones en aguas azules')"
+        >
+          <img
+            src="/src/assets/img/img-6.jpg"
+            alt="Vista aérea de marina con yates y embarcaciones en aguas azules"
+            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+            loading="lazy"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-[#0F232E]/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+          </div>
+          <div
+            class="absolute bottom-3 right-3 bg-[#FDFDFD]/95 backdrop-blur-sm rounded-full p-2 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            <Eye class="w-4 h-4 text-[#0F232E]" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Imagen 8 -->
+      <div class="group">
+        <div
+          class="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 bg-gradient-to-br from-[#D9D9D9]/10 to-[#D9D9D9]/20 cursor-pointer h-48"
+          role="button"
+          tabindex="0"
+          aria-label="Ver imagen ampliada: Evento de boda en jardín exterior"
+          onclick="openModal('/src/assets/img/img-7.jpg', 'Vista aérea de evento de boda en jardín con decoración elegante')"
+        >
+          <img
+            src="/src/assets/img/img-7.jpg"
+            alt="Vista aérea de evento de boda en jardín con decoración elegante"
+            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+            loading="lazy"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-[#0F232E]/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+          </div>
+          <div
+            class="absolute bottom-3 right-3 bg-[#FDFDFD]/95 backdrop-blur-sm rounded-full p-2 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            <Eye class="w-4 h-4 text-[#0F232E]" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Imagen 9 -->
+      <div class="group">
+        <div
+          class="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 bg-gradient-to-br from-[#D9D9D9]/10 to-[#D9D9D9]/20 cursor-pointer h-48"
+          role="button"
+          tabindex="0"
+          aria-label="Ver imagen ampliada: Construcción industrial desde el aire"
+          onclick="openModal('/src/assets/img/img-8.jpg', 'Vista aérea de sitio de construcción industrial con maquinaria')"
+        >
+          <img
+            src="/src/assets/img/img-8.jpg"
+            alt="Vista aérea de sitio de construcción industrial con maquinaria"
+            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+            loading="lazy"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-[#0F232E]/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+          </div>
+          <div
+            class="absolute bottom-3 right-3 bg-[#FDFDFD]/95 backdrop-blur-sm rounded-full p-2 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            <Eye class="w-4 h-4 text-[#0F232E]" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Modal para mostrar imágenes completas -->
+<div
+  id="imageModal"
+  class="fixed inset-0 bg-black/90 backdrop-blur-md z-50 hidden items-center justify-center p-4"
+  onclick="closeModal()"
+>
+  <div
+    class="relative max-w-7xl max-h-full w-full h-full flex items-center justify-center"
+  >
+    <!-- Botón de cerrar -->
+    <button
+      class="absolute top-4 right-4 z-60 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white rounded-full p-3 transition-all duration-300 hover:scale-110"
+      onclick="closeModal()"
+      aria-label="Cerrar modal"
+    >
+      <svg
+        class="w-6 h-6"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </button>
+
+    <!-- Contenedor de la imagen -->
+    <div
+      class="relative w-full h-full flex items-center justify-center"
+      onclick="event.stopPropagation()"
+    >
+      <img
+        id="modalImage"
+        src=""
+        alt=""
+        class="max-w-full max-h-full object-contain rounded-xl shadow-2xl"
+      />
+
+      <!-- Información de la imagen -->
+      <div
+        class="absolute bottom-4 left-4 right-4 bg-white/10 backdrop-blur-md rounded-xl p-4 text-white"
+      >
+        <p id="modalImageDescription" class="text-sm lg:text-base font-light">
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Funciones para el modal de imágenes
+  function openModal(imageSrc: string, imageAlt: string) {
+    const modal = document.getElementById("imageModal");
+    const modalImage = document.getElementById(
+      "modalImage"
+    ) as HTMLImageElement;
+    const modalDescription = document.getElementById("modalImageDescription");
+
+    if (modal && modalImage && modalDescription) {
+      modalImage.src = imageSrc;
+      modalImage.alt = imageAlt;
+      modalDescription.textContent = imageAlt;
+
+      modal.classList.remove("hidden");
+      modal.classList.add("flex");
+      document.body.style.overflow = "hidden";
+
+      // Animación de entrada
+      modal.style.opacity = "0";
+      setTimeout(() => {
+        modal.style.opacity = "1";
+      }, 10);
+    }
+  }
+
+  function closeModal() {
+    const modal = document.getElementById("imageModal");
+
+    if (modal) {
+      modal.style.opacity = "0";
+      setTimeout(() => {
+        modal.classList.add("hidden");
+        modal.classList.remove("flex");
+        document.body.style.overflow = "auto";
+      }, 300);
+    }
+  }
+
+  // Cerrar modal con tecla Escape
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+      closeModal();
+    }
+  });
+
+  // Hacer las funciones disponibles globalmente
+  (window as any).openModal = openModal;
+  (window as any).closeModal = closeModal;
+</script>

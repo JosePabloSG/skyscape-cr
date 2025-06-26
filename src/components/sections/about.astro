@@ -1,0 +1,269 @@
+---
+import User from "lucide-static/icons/user.svg";
+import MapPin from "lucide-static/icons/map-pin.svg";
+import Calendar from "lucide-static/icons/calendar.svg";
+import Camera from "lucide-static/icons/camera.svg";
+import Heart from "lucide-static/icons/heart.svg";
+import Award from "lucide-static/icons/award.svg";
+import Target from "lucide-static/icons/target.svg";
+import Zap from "lucide-static/icons/zap.svg";
+---
+
+<section
+  class="py-24 bg-[#FDFDFD] relative overflow-hidden"
+  id="sobre-nosotros"
+>
+  <!-- Elementos decorativos de fondo -->
+  <div
+    class="absolute top-24 left-16 w-36 h-36 bg-[#FF5532]/5 rounded-full blur-3xl"
+  >
+  </div>
+  <div
+    class="absolute bottom-20 right-20 w-40 h-40 bg-[#0F232E]/5 rounded-full blur-3xl"
+  >
+  </div>
+  <div
+    class="absolute top-1/4 right-1/5 w-2 h-2 bg-[#FF5532] rounded-full animate-pulse opacity-70"
+  >
+  </div>
+  <div
+    class="absolute bottom-1/3 left-1/6 w-1 h-1 bg-[#872822] rounded-full animate-pulse delay-700 opacity-60"
+  >
+  </div>
+
+  <div class="container mx-auto px-6 relative z-10">
+    <!-- Header de la sección -->
+    <div class="text-center mb-20">
+      <div
+        class="inline-flex items-center space-x-3 bg-[#FDFDFD] border border-[#D9D9D9] rounded-full px-6 py-3 shadow-sm hover:shadow-md transition-shadow mb-8"
+      >
+        <User class="w-4 h-4 text-[#FF5532]" />
+        <span class="text-sm font-medium text-[#0F232E]">Sobre Nosotros</span>
+      </div>
+
+      <h2
+        class="text-4xl lg:text-5xl font-light leading-tight tracking-tight mb-6"
+      >
+        <span class="text-[#0F232E] font-normal">Capturando</span><br />
+        <span class="text-[#FF5532] font-semibold">Costa Rica</span><br />
+        <span class="text-[#0F232E]/70 text-2xl lg:text-3xl font-light"
+          >desde las alturas</span
+        >
+      </h2>
+
+      <div class="w-16 h-0.5 bg-[#FF5532] rounded-full mx-auto mb-8"></div>
+
+      <p
+        class="text-lg text-[#0F232E]/80 leading-relaxed max-w-3xl mx-auto font-light"
+      >
+        Soy un apasionado de la fotografía aérea que transformó su amor por los
+        drones en un emprendimiento dedicado a capturar la belleza única de
+        Costa Rica desde perspectivas extraordinarias.
+      </p>
+    </div>
+
+    <div class="grid lg:grid-cols-12 gap-16 items-center mb-20">
+      <!-- Contenido principal -->
+      <div class="lg:col-span-7 space-y-8">
+        <!-- Historia personal -->
+        <div class="space-y-6">
+          <h3 class="text-2xl font-semibold text-[#0F232E] flex items-center">
+            <Heart class="w-6 h-6 text-[#FF5532] mr-3" />
+            Mi Historia
+          </h3>
+          <div class="space-y-4 text-[#0F232E]/80 leading-relaxed">
+            <p class="font-light">
+              En 2024, decidí convertir mi pasión por la tecnología de drones y
+              la fotografía en algo más grande. Lo que comenzó como un hobby
+              explorando los paisajes increíbles de Costa Rica, se transformó en <strong
+                class="text-[#0F232E] font-medium">SkyScape CR</strong
+              >, un emprendimiento dedicado a ofrecer servicios profesionales de
+              fotografía y video aéreo.
+            </p>
+            <p class="font-light">
+              Costa Rica, con su biodiversidad única y paisajes espectaculares,
+              ofrece oportunidades infinitas para la fotografía aérea. Desde las
+              montañas de Monteverde hasta las playas de Guanacaste, cada vuelo
+              es una nueva aventura y una oportunidad de capturar algo
+              extraordinario.
+            </p>
+          </div>
+        </div>
+
+        <!-- Misión y Visión -->
+        <div class="grid md:grid-cols-2 gap-8">
+          <div
+            class="bg-[#FDFDFD] border border-[#D9D9D9]/50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
+          >
+            <div class="flex items-center mb-4">
+              <div class="bg-[#FF5532] rounded-xl p-3 mr-4">
+                <Target class="w-6 h-6 text-[#FDFDFD]" />
+              </div>
+              <h4 class="text-xl font-semibold text-[#0F232E]">Misión</h4>
+            </div>
+            <p class="text-[#0F232E]/70 font-light leading-relaxed">
+              Brindar servicios de fotografía aérea de alta calidad que capturen
+              la esencia única de cada proyecto, utilizando tecnología de punta
+              y creatividad para contar historias desde el cielo.
+            </p>
+          </div>
+
+          <div
+            class="bg-[#FDFDFD] border border-[#D9D9D9]/50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
+          >
+            <div class="flex items-center mb-4">
+              <div class="bg-[#0F232E] rounded-xl p-3 mr-4">
+                <Zap class="w-6 h-6 text-[#FDFDFD]" />
+              </div>
+              <h4 class="text-xl font-semibold text-[#0F232E]">Visión</h4>
+            </div>
+            <p class="text-[#0F232E]/70 font-light leading-relaxed">
+              Convertirme en el referente de fotografía aérea en Costa Rica,
+              reconocido por la innovación, calidad técnica y capacidad de
+              transformar cada proyecto en una experiencia visual memorable.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Imagen y datos -->
+      <div class="lg:col-span-5 relative">
+        <div class="relative">
+          <!-- Imagen principal -->
+          <div
+            class="relative bg-[#F8F8F8] rounded-2xl overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-transform duration-500"
+          >
+            <img
+              src="/src/assets/me.png"
+              alt="Operador de drone capturando fotografías aéreas en Costa Rica"
+              class="w-full h-80 object-cover"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-[#0F232E]/10"></div>
+            <div
+              class="absolute top-4 right-4 bg-[#FDFDFD]/95 backdrop-blur-sm rounded-full p-3 shadow-lg border border-[#D9D9D9]/30"
+            >
+              <Camera class="w-5 h-5 text-[#FF5532]" />
+            </div>
+          </div>
+
+          <!-- Tarjeta flotante con datos clave -->
+          <div
+            class="absolute -bottom-8 -left-8 bg-[#FDFDFD] rounded-2xl p-6 shadow-xl border border-[#D9D9D9]/50 transform hover:scale-[1.05] transition-transform duration-300"
+          >
+            <div class="space-y-4">
+              <div class="flex items-center space-x-3">
+                <MapPin class="w-5 h-5 text-[#FF5532]" />
+                <div>
+                  <div class="text-sm font-medium text-[#0F232E]">
+                    Ubicación
+                  </div>
+                  <div class="text-xs text-[#0F232E]/60">Costa Rica</div>
+                </div>
+              </div>
+              <div class="flex items-center space-x-3">
+                <Calendar class="w-5 h-5 text-[#FF5532]" />
+                <div>
+                  <div class="text-sm font-medium text-[#0F232E]">Fundado</div>
+                  <div class="text-xs text-[#0F232E]/60">2024</div>
+                </div>
+              </div>
+              <div class="flex items-center space-x-3">
+                <Award class="w-5 h-5 text-[#FF5532]" />
+                <div>
+                  <div class="text-sm font-medium text-[#0F232E]">
+                    Especialidad
+                  </div>
+                  <div class="text-xs text-[#0F232E]/60">Fotografía Aérea</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Valores y fortalezas -->
+    <div class="mb-16">
+      <h3
+        class="text-2xl lg:text-3xl font-semibold text-[#0F232E] text-center mb-12"
+      >
+        ¿Por qué elegir <span class="text-[#FF5532]">SkyScape CR</span>?
+      </h3>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Valor 1 -->
+        <div
+          class="text-center group hover:transform hover:scale-105 transition-all duration-300"
+        >
+          <div
+            class="bg-[#FF5532] rounded-2xl p-4 w-16 h-16 mx-auto mb-4 shadow-lg group-hover:shadow-xl transition-shadow duration-300"
+          >
+            <Camera class="w-8 h-8 text-[#FDFDFD]" />
+          </div>
+          <h4 class="text-lg font-semibold text-[#0F232E] mb-2">
+            Calidad Profesional
+          </h4>
+          <p class="text-sm text-[#0F232E]/70 font-light">
+            Equipos de última generación para resultados excepcionales en cada
+            proyecto.
+          </p>
+        </div>
+
+        <!-- Valor 2 -->
+        <div
+          class="text-center group hover:transform hover:scale-105 transition-all duration-300"
+        >
+          <div
+            class="bg-[#0F232E] rounded-2xl p-4 w-16 h-16 mx-auto mb-4 shadow-lg group-hover:shadow-xl transition-shadow duration-300"
+          >
+            <Heart class="w-8 h-8 text-[#FDFDFD]" />
+          </div>
+          <h4 class="text-lg font-semibold text-[#0F232E] mb-2">
+            Pasión Local
+          </h4>
+          <p class="text-sm text-[#0F232E]/70 font-light">
+            Conocimiento profundo de Costa Rica y sus paisajes más
+            espectaculares.
+          </p>
+        </div>
+
+        <!-- Valor 3 -->
+        <div
+          class="text-center group hover:transform hover:scale-105 transition-all duration-300"
+        >
+          <div
+            class="bg-[#872822] rounded-2xl p-4 w-16 h-16 mx-auto mb-4 shadow-lg group-hover:shadow-xl transition-shadow duration-300"
+          >
+            <Zap class="w-8 h-8 text-[#FDFDFD]" />
+          </div>
+          <h4 class="text-lg font-semibold text-[#0F232E] mb-2">
+            Entrega Rápida
+          </h4>
+          <p class="text-sm text-[#0F232E]/70 font-light">
+            Procesamiento eficiente para que tengas tus contenidos en tiempo
+            récord.
+          </p>
+        </div>
+
+        <!-- Valor 4 -->
+        <div
+          class="text-center group hover:transform hover:scale-105 transition-all duration-300"
+        >
+          <div
+            class="bg-[#FF5532] rounded-2xl p-4 w-16 h-16 mx-auto mb-4 shadow-lg group-hover:shadow-xl transition-shadow duration-300"
+          >
+            <User class="w-8 h-8 text-[#FDFDFD]" />
+          </div>
+          <h4 class="text-lg font-semibold text-[#0F232E] mb-2">
+            Atención Personal
+          </h4>
+          <p class="text-sm text-[#0F232E]/70 font-light">
+            Servicio personalizado adaptado a las necesidades específicas de
+            cada cliente.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

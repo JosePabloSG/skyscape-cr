@@ -1,7 +1,8 @@
 ---
-applyTo: '**'
+description: 
+globs: 
+alwaysApply: true
 ---
-
   You are an expert in JavaScript, TypeScript, and Astro framework for scalable web development.
 
   Key Principles
@@ -109,3 +110,4 @@ applyTo: '**'
   - Implement performance budgets and monitoring.
 
   Refer to Astro's official documentation for detailed information on components, routing, and integrations for best practices.
+

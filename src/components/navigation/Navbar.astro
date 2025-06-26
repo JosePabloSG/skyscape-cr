@@ -1,0 +1,348 @@
+---
+import Camera from "lucide-static/icons/camera.svg";
+import Menu from "lucide-static/icons/menu.svg";
+import X from "lucide-static/icons/x.svg";
+---
+
+<nav
+  class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
+  id="navbar"
+>
+  <!-- Fondo glassmorphism mejorado y más transparente -->
+  <div
+    class="absolute inset-0 bg-white/20 backdrop-blur-3xl border-b border-white/20 shadow-2xl"
+  >
+  </div>
+
+  <!-- Elementos decorativos para efecto cristal más sutil -->
+  <div
+    class="absolute top-0 left-1/4 w-48 h-48 bg-[#FF5532]/3 rounded-full blur-3xl animate-pulse"
+  >
+  </div>
+  <div
+    class="absolute top-0 right-1/3 w-32 h-32 bg-[#0F232E]/5 rounded-full blur-3xl"
+  >
+  </div>
+  <div
+    class="absolute inset-0 bg-gradient-to-r from-transparent via-white/3 to-transparent"
+  >
+  </div>
+
+  <div class="container mx-auto px-6 relative z-10">
+    <div class="flex items-center justify-between h-20">
+      <!-- Logo mejorado con fondo más redondeado -->
+      <a
+        href="#inicio"
+        class="flex items-center space-x-3 group transition-all duration-300 hover:scale-105"
+      >
+        <div
+          class="bg-[#FF5532]/95 backdrop-blur-sm rounded-3xl p-3 shadow-xl group-hover:shadow-2xl transition-all duration-300 group-hover:bg-[#FF5532] border border-[#FF5532]/20"
+        >
+          <Camera class="w-6 h-6 text-white" />
+        </div>
+        <div class="hidden sm:block">
+          <span
+            class="text-xl font-bold text-[#0F232E] group-hover:text-[#FF5532] transition-colors duration-300"
+          >
+            SkyScape CR
+          </span>
+          <p class="text-xs text-[#0F232E]/60 font-light">Fotografía Aérea</p>
+        </div>
+      </a>
+
+      <!-- Navegación desktop con efecto cristal mejorado -->
+      <div class="hidden lg:flex items-center space-x-1">
+        <a
+          href="#inicio"
+          class="nav-link px-4 py-2.5 text-sm font-medium text-[#0F232E]/90 hover:text-[#FF5532] hover:bg-white/30 rounded-full transition-all duration-300 backdrop-blur-sm border border-transparent hover:border-[#FF5532]/30 hover:shadow-lg"
+        >
+          Inicio
+        </a>
+        <a
+          href="#servicios"
+          class="nav-link px-4 py-2.5 text-sm font-medium text-[#0F232E]/90 hover:text-[#FF5532] hover:bg-white/30 rounded-full transition-all duration-300 backdrop-blur-sm border border-transparent hover:border-[#FF5532]/30 hover:shadow-lg"
+        >
+          Servicios
+        </a>
+        <a
+          href="#galeria"
+          class="nav-link px-4 py-2.5 text-sm font-medium text-[#0F232E]/90 hover:text-[#FF5532] hover:bg-white/30 rounded-full transition-all duration-300 backdrop-blur-sm border border-transparent hover:border-[#FF5532]/30 hover:shadow-lg"
+        >
+          Galería
+        </a>
+        <a
+          href="#sobre-nosotros"
+          class="nav-link px-4 py-2.5 text-sm font-medium text-[#0F232E]/90 hover:text-[#FF5532] hover:bg-white/30 rounded-full transition-all duration-300 backdrop-blur-sm border border-transparent hover:border-[#FF5532]/30 hover:shadow-lg"
+        >
+          Nosotros
+        </a>
+        <a
+          href="#proceso"
+          class="nav-link px-4 py-2.5 text-sm font-medium text-[#0F232E]/90 hover:text-[#FF5532] hover:bg-white/30 rounded-full transition-all duration-300 backdrop-blur-sm border border-transparent hover:border-[#FF5532]/30 hover:shadow-lg"
+        >
+          Proceso
+        </a>
+      </div>
+
+      <!-- Botón menú móvil mejorado -->
+      <button
+        id="mobile-menu-btn"
+        class="lg:hidden bg-white/40 hover:bg-white/60 p-2.5 rounded-3xl transition-all duration-300 backdrop-blur-sm shadow-xl border border-white/20 hover:border-[#FF5532]/30"
+        aria-label="Abrir menú"
+      >
+        <Menu class="w-5 h-5 text-[#0F232E] menu-icon" />
+        <X class="w-5 h-5 text-[#0F232E] close-icon hidden" />
+      </button>
+    </div>
+  </div>
+
+  <!-- Menú móvil con mejor efecto glassmorphism -->
+  <div
+    id="mobile-menu"
+    class="lg:hidden absolute top-full left-0 right-0 bg-white/15 backdrop-blur-3xl border-b border-white/20 shadow-2xl transform -translate-y-full opacity-0 transition-all duration-500 ease-out"
+  >
+    <div class="container mx-auto px-6 py-6">
+      <div class="flex flex-col space-y-4">
+        <a
+          href="#inicio"
+          class="mobile-nav-link block px-4 py-3 text-[#0F232E]/90 hover:text-[#FF5532] hover:bg-white/20 rounded-xl transition-all duration-300 font-medium border border-transparent hover:border-[#FF5532]/20 backdrop-blur-sm"
+        >
+          Inicio
+        </a>
+        <a
+          href="#servicios"
+          class="mobile-nav-link block px-4 py-3 text-[#0F232E]/90 hover:text-[#FF5532] hover:bg-white/20 rounded-xl transition-all duration-300 font-medium border border-transparent hover:border-[#FF5532]/20 backdrop-blur-sm"
+        >
+          Servicios
+        </a>
+        <a
+          href="#galeria"
+          class="mobile-nav-link block px-4 py-3 text-[#0F232E]/90 hover:text-[#FF5532] hover:bg-white/20 rounded-xl transition-all duration-300 font-medium border border-transparent hover:border-[#FF5532]/20 backdrop-blur-sm"
+        >
+          Galería
+        </a>
+        <a
+          href="#sobre-nosotros"
+          class="mobile-nav-link block px-4 py-3 text-[#0F232E]/90 hover:text-[#FF5532] hover:bg-white/20 rounded-xl transition-all duration-300 font-medium border border-transparent hover:border-[#FF5532]/20 backdrop-blur-sm"
+        >
+          Sobre Nosotros
+        </a>
+        <a
+          href="#proceso"
+          class="mobile-nav-link block px-4 py-3 text-[#0F232E]/90 hover:text-[#FF5532] hover:bg-white/20 rounded-xl transition-all duration-300 font-medium border border-transparent hover:border-[#FF5532]/20 backdrop-blur-sm"
+        >
+          Proceso
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const navbar = document.getElementById("navbar");
+    const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const menuIcon = document.querySelector(".menu-icon");
+    const closeIcon = document.querySelector(".close-icon");
+    const navLinks = document.querySelectorAll(".nav-link, .mobile-nav-link");
+
+    // Estado del menú móvil
+    let mobileMenuOpen = false;
+
+    // Función para alternar menú móvil
+    function toggleMobileMenu() {
+      mobileMenuOpen = !mobileMenuOpen;
+
+      if (mobileMenuOpen) {
+        mobileMenu?.classList.remove("-translate-y-full", "opacity-0");
+        mobileMenu?.classList.add("translate-y-0", "opacity-100");
+        menuIcon?.classList.add("hidden");
+        closeIcon?.classList.remove("hidden");
+      } else {
+        mobileMenu?.classList.add("-translate-y-full", "opacity-0");
+        mobileMenu?.classList.remove("translate-y-0", "opacity-100");
+        menuIcon?.classList.remove("hidden");
+        closeIcon?.classList.add("hidden");
+      }
+    }
+
+    // Event listener para botón de menú móvil
+    mobileMenuBtn?.addEventListener("click", toggleMobileMenu);
+
+    // Cerrar menú móvil al hacer click en enlaces
+    navLinks.forEach((link) => {
+      link.addEventListener("click", (e) => {
+        e.preventDefault();
+        const targetId = link.getAttribute("href");
+
+        // Cerrar menú móvil si está abierto
+        if (mobileMenuOpen) {
+          toggleMobileMenu();
+        }
+
+        // Scroll suave a la sección
+        if (targetId && targetId !== "#") {
+          const targetElement = document.querySelector(targetId) as HTMLElement;
+          if (targetElement) {
+            const offsetTop = targetElement.offsetTop - 100; // Offset para el navbar fixed
+            window.scrollTo({
+              top: offsetTop,
+              behavior: "smooth",
+            });
+          }
+        }
+      });
+    });
+
+    // Efecto glassmorphism dinámico al hacer scroll
+    function updateNavbarOnScroll() {
+      const scrollY = window.scrollY;
+
+      if (scrollY > 50) {
+        navbar?.classList.add("navbar-scrolled");
+        // Aumentar el efecto blur y opacidad al hacer scroll
+        const backdrop = navbar?.querySelector(".absolute.inset-0");
+        if (backdrop) {
+          backdrop.classList.remove("bg-white/20");
+          backdrop.classList.add("bg-white/40");
+        }
+      } else {
+        navbar?.classList.remove("navbar-scrolled");
+        // Restaurar efecto original más transparente
+        const backdrop = navbar?.querySelector(".absolute.inset-0");
+        if (backdrop) {
+          backdrop.classList.remove("bg-white/40");
+          backdrop.classList.add("bg-white/20");
+        }
+      }
+    }
+
+    // Highlight del enlace activo basado en la sección visible
+    function updateActiveLink() {
+      const sections = [
+        "inicio",
+        "servicios",
+        "galeria",
+        "sobre-nosotros",
+        "proceso",
+      ];
+      const scrollPosition = window.scrollY + 150;
+
+      sections.forEach((sectionId) => {
+        const section = document.getElementById(sectionId) as HTMLElement;
+        const link = document.querySelector(`a[href="#${sectionId}"]`);
+
+        if (section && link) {
+          const sectionTop = section.offsetTop;
+          const sectionBottom = sectionTop + section.offsetHeight;
+
+          if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+            // Remover clase activa de todos los enlaces
+            navLinks.forEach((navLink) => {
+              navLink.classList.remove(
+                "text-[#FF5532]",
+                "bg-white/20",
+                "border-[#FF5532]/20"
+              );
+              navLink.classList.add("text-[#0F232E]/90");
+            });
+
+            // Agregar clase activa al enlace actual
+            link.classList.remove("text-[#0F232E]/90");
+            link.classList.add(
+              "text-[#FF5532]",
+              "bg-white/20",
+              "border-[#FF5532]/20"
+            );
+          }
+        }
+      });
+    }
+
+    // Event listeners para scroll
+    window.addEventListener("scroll", () => {
+      updateNavbarOnScroll();
+      updateActiveLink();
+    });
+
+    // Inicializar estado
+    updateNavbarOnScroll();
+    updateActiveLink();
+
+    // Cerrar menú móvil al redimensionar ventana
+    window.addEventListener("resize", () => {
+      if (window.innerWidth >= 1024 && mobileMenuOpen) {
+        toggleMobileMenu();
+      }
+    });
+  });
+</script>
+
+<style>
+  /* Mejoras para el efecto glassmorphism más fuerte */
+  #navbar {
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+  }
+
+  .navbar-scrolled {
+    transform: translateY(0);
+  }
+
+  /* Animaciones suaves para los enlaces */
+  .nav-link,
+  .mobile-nav-link {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .nav-link::before,
+  .mobile-nav-link::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 85, 50, 0.1),
+      transparent
+    );
+    transition: left 0.5s ease;
+  }
+
+  .nav-link:hover::before,
+  .mobile-nav-link:hover::before {
+    left: 100%;
+  }
+
+  /* Efecto de cristal líquido para elementos con backdrop-blur */
+  .backdrop-blur-3xl {
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+  }
+
+  /* Mejoras visuales para el efecto cristal */
+  .nav-link:hover,
+  .mobile-nav-link:hover {
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+
+  /* Smooth scroll para toda la página */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Garantizar que el texto blanco sea visible */
+  a[style*="color: white"] {
+    color: white !important;
+  }
+
+  a[style*="color: white"] span {
+    color: white !important;
+  }
+</style>

@@ -1,0 +1,393 @@
+---
+import MessageCircle from "lucide-static/icons/message-circle.svg";
+import Calendar from "lucide-static/icons/calendar.svg";
+import Camera from "lucide-static/icons/camera.svg";
+import Package from "lucide-static/icons/package.svg";
+import Check from "lucide-static/icons/check.svg";
+import Zap from "lucide-static/icons/zap.svg";
+import ArrowRight from "lucide-static/icons/arrow-right.svg";
+---
+
+<section class="py-24 bg-[#FDFDFD] relative overflow-hidden" id="proceso">
+  <!-- Elementos decorativos de fondo -->
+  <div
+    class="absolute top-16 right-12 w-32 h-32 bg-[#FF5532]/5 rounded-full blur-3xl"
+  >
+  </div>
+  <div
+    class="absolute bottom-24 left-16 w-40 h-40 bg-[#0F232E]/5 rounded-full blur-3xl"
+  >
+  </div>
+  <div
+    class="absolute top-1/3 left-1/4 w-2 h-2 bg-[#FF5532] rounded-full animate-pulse opacity-60"
+  >
+  </div>
+  <div
+    class="absolute bottom-1/2 right-1/3 w-1 h-1 bg-[#872822] rounded-full animate-pulse delay-500 opacity-80"
+  >
+  </div>
+
+  <div class="container mx-auto px-6 relative z-10">
+    <!-- Header de la sección -->
+    <div class="text-center mb-20">
+      <div
+        class="inline-flex items-center space-x-3 bg-[#FDFDFD] border border-[#D9D9D9] rounded-full px-6 py-3 shadow-sm hover:shadow-md transition-shadow mb-8"
+      >
+        <Zap class="w-4 h-4 text-[#FF5532]" />
+        <span class="text-sm font-medium text-[#0F232E]">Nuestro Proceso</span>
+      </div>
+
+      <h2
+        class="text-4xl lg:text-5xl font-light leading-tight tracking-tight mb-6"
+      >
+        <span class="text-[#0F232E] font-normal">Nuestro Proceso</span><br />
+        <span class="text-[#FF5532] font-semibold">de Trabajo</span>
+      </h2>
+
+      <div class="w-16 h-0.5 bg-[#FF5532] rounded-full mx-auto mb-8"></div>
+
+      <p
+        class="text-lg text-[#0F232E]/80 leading-relaxed max-w-3xl mx-auto font-light"
+      >
+        Nuestro enfoque garantiza calidad y atención en cada detalle. Descubre
+        cómo trabajamos para transformar tu visión en realidad desde las
+        alturas.
+      </p>
+    </div>
+
+    <!-- Proceso paso a paso -->
+    <div class="space-y-16">
+      <!-- Paso 1: Consulta Inicial -->
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-7 order-2 lg:order-1">
+          <div class="space-y-6">
+            <!-- Número y título -->
+            <div class="flex items-center space-x-4 mb-6">
+              <div
+                class="w-12 h-12 bg-[#FF5532] rounded-full flex items-center justify-center text-[#FDFDFD] font-bold text-lg shadow-lg"
+              >
+                01
+              </div>
+              <div>
+                <h3 class="text-2xl lg:text-3xl font-semibold text-[#0F232E]">
+                  Consulta Inicial
+                </h3>
+                <p class="text-[#0F232E]/60 font-light">Entendemos tu visión</p>
+              </div>
+            </div>
+
+            <!-- Descripción -->
+            <p
+              class="text-lg text-[#0F232E]/80 leading-relaxed font-light mb-6"
+            >
+              Nos reunimos para entender tu visión y las necesidades específicas
+              de tu proyecto.
+            </p>
+
+            <!-- Lista de características -->
+            <div class="space-y-4">
+              <div class="flex items-start space-x-3">
+                <Check class="w-5 h-5 text-[#FF5532] mt-0.5 flex-shrink-0" />
+                <span class="text-[#0F232E]/70 font-light"
+                  >Definimos el tipo de proyecto: evento, campaña de marketing,
+                  inspección técnica, entre otros.</span
+                >
+              </div>
+              <div class="flex items-start space-x-3">
+                <Check class="w-5 h-5 text-[#FF5532] mt-0.5 flex-shrink-0" />
+                <span class="text-[#0F232E]/70 font-light"
+                  >Identificamos la ubicación y el alcance del trabajo.</span
+                >
+              </div>
+              <div class="flex items-start space-x-3">
+                <Check class="w-5 h-5 text-[#FF5532] mt-0.5 flex-shrink-0" />
+                <span class="text-[#0F232E]/70 font-light"
+                  >Establecemos los resultados esperados, como estilo, formato
+                  de entrega y tiempos.</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Imagen -->
+        <div class="lg:col-span-5 order-1 lg:order-2">
+          <div class="relative">
+            <div
+              class="relative bg-[#F8F8F8] rounded-2xl overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-transform duration-500"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop&crop=center"
+                alt="Reunión de consulta inicial para proyecto de fotografía aérea"
+                class="w-full h-64 lg:h-80 object-cover"
+                loading="lazy"
+              />
+              <div class="absolute inset-0 bg-[#0F232E]/10"></div>
+              <div
+                class="absolute top-4 right-4 bg-[#FDFDFD]/95 backdrop-blur-sm rounded-full p-3 shadow-lg border border-[#D9D9D9]/30"
+              >
+                <MessageCircle class="w-5 h-5 text-[#FF5532]" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Línea conectora -->
+      <div class="flex justify-center">
+        <div class="w-px h-16 bg-[#FF5532]"></div>
+      </div>
+
+      <!-- Paso 2: Planificación -->
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-5">
+          <div class="relative">
+            <div
+              class="relative bg-[#F8F8F8] rounded-2xl overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-transform duration-500"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?w=600&h=400&fit=crop&crop=center"
+                alt="Planificación estratégica de vuelo de dron con mapas y tecnología"
+                class="w-full h-64 lg:h-80 object-cover"
+                loading="lazy"
+              />
+              <div class="absolute inset-0 bg-[#0F232E]/10"></div>
+              <div
+                class="absolute top-4 right-4 bg-[#FDFDFD]/95 backdrop-blur-sm rounded-full p-3 shadow-lg border border-[#D9D9D9]/30"
+              >
+                <Calendar class="w-5 h-5 text-[#FF5532]" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7">
+          <div class="space-y-6">
+            <!-- Número y título -->
+            <div class="flex items-center space-x-4 mb-6">
+              <div
+                class="w-12 h-12 bg-[#0F232E] rounded-full flex items-center justify-center text-[#FDFDFD] font-bold text-lg shadow-lg"
+              >
+                02
+              </div>
+              <div>
+                <h3 class="text-2xl lg:text-3xl font-semibold text-[#0F232E]">
+                  Planificación
+                </h3>
+                <p class="text-[#0F232E]/60 font-light">
+                  Diseñamos la estrategia perfecta
+                </p>
+              </div>
+            </div>
+
+            <!-- Descripción -->
+            <p
+              class="text-lg text-[#0F232E]/80 leading-relaxed font-light mb-6"
+            >
+              Diseñamos un plan a la medida para garantizar el éxito de tu
+              proyecto.
+            </p>
+
+            <!-- Lista de características -->
+            <div class="space-y-4">
+              <div class="flex items-start space-x-3">
+                <Check class="w-5 h-5 text-[#0F232E] mt-0.5 flex-shrink-0" />
+                <span class="text-[#0F232E]/70 font-light"
+                  >Analizamos la ubicación para encontrar los mejores ángulos y
+                  horarios.</span
+                >
+              </div>
+              <div class="flex items-start space-x-3">
+                <Check class="w-5 h-5 text-[#0F232E] mt-0.5 flex-shrink-0" />
+                <span class="text-[#0F232E]/70 font-light"
+                  >Revisamos las condiciones climáticas para asegurar seguridad
+                  y calidad.</span
+                >
+              </div>
+              <div class="flex items-start space-x-3">
+                <Check class="w-5 h-5 text-[#0F232E] mt-0.5 flex-shrink-0" />
+                <span class="text-[#0F232E]/70 font-light"
+                  >Gestionamos los permisos necesarios para el vuelo del dron,
+                  si aplica.</span
+                >
+              </div>
+              <div class="flex items-start space-x-3">
+                <Check class="w-5 h-5 text-[#0F232E] mt-0.5 flex-shrink-0" />
+                <span class="text-[#0F232E]/70 font-light"
+                  >Preparamos nuestros drones con tecnología avanzada para un
+                  rendimiento óptimo.</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Línea conectora -->
+      <div class="flex justify-center">
+        <div class="w-px h-16 bg-[#0F232E]"></div>
+      </div>
+
+      <!-- Paso 3: Captura -->
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-7 order-2 lg:order-1">
+          <div class="space-y-6">
+            <!-- Número y título -->
+            <div class="flex items-center space-x-4 mb-6">
+              <div
+                class="w-12 h-12 bg-[#872822] rounded-full flex items-center justify-center text-[#FDFDFD] font-bold text-lg shadow-lg"
+              >
+                03
+              </div>
+              <div>
+                <h3 class="text-2xl lg:text-3xl font-semibold text-[#0F232E]">
+                  Captura
+                </h3>
+                <p class="text-[#0F232E]/60 font-light">
+                  Creatividad en acción
+                </p>
+              </div>
+            </div>
+
+            <!-- Descripción -->
+            <p
+              class="text-lg text-[#0F232E]/80 leading-relaxed font-light mb-6"
+            >
+              Realizamos la grabación o fotografía con creatividad y
+              profesionalismo.
+            </p>
+
+            <!-- Lista de características -->
+            <div class="space-y-4">
+              <div class="flex items-start space-x-3">
+                <Check class="w-5 h-5 text-[#872822] mt-0.5 flex-shrink-0" />
+                <span class="text-[#0F232E]/70 font-light"
+                  >Un piloto certificado opera el dron de manera segura y
+                  eficiente.</span
+                >
+              </div>
+              <div class="flex items-start space-x-3">
+                <Check class="w-5 h-5 text-[#872822] mt-0.5 flex-shrink-0" />
+                <span class="text-[#0F232E]/70 font-light"
+                  >Capturamos imágenes dinámicas y creativas desde perspectivas
+                  únicas.</span
+                >
+              </div>
+              <div class="flex items-start space-x-3">
+                <Check class="w-5 h-5 text-[#872822] mt-0.5 flex-shrink-0" />
+                <span class="text-[#0F232E]/70 font-light"
+                  >Nos adaptamos rápidamente a cualquier cambio o nueva
+                  solicitud durante el trabajo.</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Imagen -->
+        <div class="lg:col-span-5 order-1 lg:order-2">
+          <div class="relative">
+            <div
+              class="relative bg-[#F8F8F8] rounded-2xl overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-transform duration-500"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1473968512647-3e447244af8f?w=600&h=400&fit=crop&crop=center"
+                alt="Dron profesional capturando fotografías aéreas en acción"
+                class="w-full h-64 lg:h-80 object-cover"
+                loading="lazy"
+              />
+              <div class="absolute inset-0 bg-[#0F232E]/10"></div>
+              <div
+                class="absolute top-4 right-4 bg-[#FDFDFD]/95 backdrop-blur-sm rounded-full p-3 shadow-lg border border-[#D9D9D9]/30"
+              >
+                <Camera class="w-5 h-5 text-[#872822]" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Línea conectora -->
+      <div class="flex justify-center">
+        <div class="w-px h-16 bg-[#872822]"></div>
+      </div>
+
+      <!-- Paso 4: Entrega -->
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-5">
+          <div class="relative">
+            <div
+              class="relative bg-[#F8F8F8] rounded-2xl overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-transform duration-500"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop&crop=center"
+                alt="Entrega profesional de archivos digitales editados"
+                class="w-full h-64 lg:h-80 object-cover"
+                loading="lazy"
+              />
+              <div class="absolute inset-0 bg-[#0F232E]/10"></div>
+              <div
+                class="absolute top-4 right-4 bg-[#FDFDFD]/95 backdrop-blur-sm rounded-full p-3 shadow-lg border border-[#D9D9D9]/30"
+              >
+                <Package class="w-5 h-5 text-[#FF5532]" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7">
+          <div class="space-y-6">
+            <!-- Número y título -->
+            <div class="flex items-center space-x-4 mb-6">
+              <div
+                class="w-12 h-12 bg-[#FF5532] rounded-full flex items-center justify-center text-[#FDFDFD] font-bold text-lg shadow-lg"
+              >
+                04
+              </div>
+              <div>
+                <h3 class="text-2xl lg:text-3xl font-semibold text-[#0F232E]">
+                  Entrega
+                </h3>
+                <p class="text-[#0F232E]/60 font-light">
+                  Resultados que superan expectativas
+                </p>
+              </div>
+            </div>
+
+            <!-- Descripción -->
+            <p
+              class="text-lg text-[#0F232E]/80 leading-relaxed font-light mb-6"
+            >
+              Te entregamos resultados que superan tus expectativas.
+            </p>
+
+            <!-- Lista de características -->
+            <div class="space-y-4">
+              <div class="flex items-start space-x-3">
+                <Check class="w-5 h-5 text-[#FF5532] mt-0.5 flex-shrink-0" />
+                <span class="text-[#0F232E]/70 font-light"
+                  >Editamos las imágenes y videos profesionalmente para resaltar
+                  su calidad.</span
+                >
+              </div>
+              <div class="flex items-start space-x-3">
+                <Check class="w-5 h-5 text-[#FF5532] mt-0.5 flex-shrink-0" />
+                <span class="text-[#0F232E]/70 font-light"
+                  >Ofrecemos los archivos en los formatos que necesitas: desde
+                  originales hasta listos para uso, como JPEG, MP4, entre otros.</span
+                >
+              </div>
+              <div class="flex items-start space-x-3">
+                <Check class="w-5 h-5 text-[#FF5532] mt-0.5 flex-shrink-0" />
+                <span class="text-[#0F232E]/70 font-light"
+                  >Cumplimos con los plazos acordados para una entrega rápida y
+                  puntual.</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

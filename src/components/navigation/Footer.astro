@@ -1,0 +1,212 @@
+---
+import Mail from "lucide-static/icons/mail.svg";
+import Phone from "lucide-static/icons/phone.svg";
+import MapPin from "lucide-static/icons/map-pin.svg";
+import Camera from "lucide-static/icons/camera.svg";
+import Instagram from "lucide-static/icons/instagram.svg";
+import Facebook from "lucide-static/icons/facebook.svg";
+import Twitter from "lucide-static/icons/twitter.svg";
+import ArrowUp from "lucide-static/icons/arrow-up.svg";
+---
+
+<footer class="bg-[#0F232E] text-[#FDFDFD] relative overflow-hidden">
+  <!-- Elementos decorativos de fondo -->
+  <div
+    class="absolute top-12 left-20 w-24 h-24 bg-[#FF5532]/5 rounded-full blur-2xl"
+  >
+  </div>
+  <div
+    class="absolute bottom-16 right-24 w-32 h-32 bg-[#872822]/5 rounded-full blur-2xl"
+  >
+  </div>
+  <div
+    class="absolute top-1/2 left-1/4 w-1 h-1 bg-[#FF5532] rounded-full animate-pulse opacity-60"
+  >
+  </div>
+  <div
+    class="absolute bottom-1/3 right-1/3 w-1.5 h-1.5 bg-[#872822] rounded-full animate-pulse delay-1000 opacity-50"
+  >
+  </div>
+
+  <div class="container mx-auto px-6 relative z-10">
+    <!-- Contenido principal del footer -->
+    <div class="py-16 border-b border-[#FDFDFD]/10">
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Logo y descripción -->
+        <div class="lg:col-span-2">
+          <div class="flex items-center space-x-3 mb-6">
+            <div class="bg-[#FF5532] rounded-xl p-3">
+              <Camera class="w-6 h-6 text-[#FDFDFD]" />
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-[#FDFDFD]">SkyScape CR</h3>
+              <p class="text-sm text-[#FDFDFD]/70">Fotografía Aérea</p>
+            </div>
+          </div>
+          <p class="text-[#FDFDFD]/80 leading-relaxed mb-6 max-w-md font-light">
+            Capturamos la belleza de Costa Rica desde las alturas con tecnología
+            de vanguardia y creatividad profesional. Tu visión, nuestra
+            perspectiva aérea.
+          </p>
+
+          <!-- Redes sociales -->
+          <div class="flex space-x-4">
+            <a
+              href="#"
+              class="bg-[#FDFDFD]/10 hover:bg-[#FF5532] rounded-lg p-2 transition-colors duration-300 group"
+              aria-label="Instagram"
+            >
+              <Instagram
+                class="w-5 h-5 text-[#FDFDFD]/70 group-hover:text-[#FDFDFD]"
+              />
+            </a>
+            <a
+              href="#"
+              class="bg-[#FDFDFD]/10 hover:bg-[#FF5532] rounded-lg p-2 transition-colors duration-300 group"
+              aria-label="Facebook"
+            >
+              <Facebook
+                class="w-5 h-5 text-[#FDFDFD]/70 group-hover:text-[#FDFDFD]"
+              />
+            </a>
+            <a
+              href="#"
+              class="bg-[#FDFDFD]/10 hover:bg-[#FF5532] rounded-lg p-2 transition-colors duration-300 group"
+              aria-label="Twitter"
+            >
+              <Twitter
+                class="w-5 h-5 text-[#FDFDFD]/70 group-hover:text-[#FDFDFD]"
+              />
+            </a>
+          </div>
+        </div>
+
+        <!-- Enlaces rápidos -->
+        <div>
+          <h4 class="text-lg font-semibold text-[#FDFDFD] mb-6">
+            Enlaces Rápidos
+          </h4>
+          <ul class="space-y-3">
+            <li>
+              <a
+                href="#inicio"
+                class="text-[#FDFDFD]/70 hover:text-[#FF5532] transition-colors duration-300 font-light"
+              >
+                Inicio
+              </a>
+            </li>
+            <li>
+              <a
+                href="#servicios"
+                class="text-[#FDFDFD]/70 hover:text-[#FF5532] transition-colors duration-300 font-light"
+              >
+                Servicios
+              </a>
+            </li>
+            <li>
+              <a
+                href="#galeria"
+                class="text-[#FDFDFD]/70 hover:text-[#FF5532] transition-colors duration-300 font-light"
+              >
+                Galería
+              </a>
+            </li>
+            <li>
+              <a
+                href="#sobre-nosotros"
+                class="text-[#FDFDFD]/70 hover:text-[#FF5532] transition-colors duration-300 font-light"
+              >
+                Sobre Nosotros
+              </a>
+            </li>
+            <li>
+              <a
+                href="#proceso"
+                class="text-[#FDFDFD]/70 hover:text-[#FF5532] transition-colors duration-300 font-light"
+              >
+                Proceso
+              </a>
+            </li>
+            <li>
+              <a
+                href="#contacto"
+                class="text-[#FDFDFD]/70 hover:text-[#FF5532] transition-colors duration-300 font-light"
+              >
+                Contacto
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Información de contacto -->
+        <div>
+          <h4 class="text-lg font-semibold text-[#FDFDFD] mb-6">Contacto</h4>
+          <div class="space-y-4">
+            <div class="flex items-start space-x-3">
+              <div class="bg-[#FF5532] rounded-lg p-2 mt-0.5">
+                <Mail class="w-4 h-4 text-[#FDFDFD]" />
+              </div>
+              <div>
+                <p class="text-sm font-medium text-[#FDFDFD]">Email</p>
+                <a
+                  href="mailto:info@skyscape-cr.com"
+                  class="text-[#FDFDFD]/70 hover:text-[#FF5532] transition-colors duration-300 font-light text-sm"
+                >
+                  info@skyscape-cr.com
+                </a>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-3">
+              <div class="bg-[#872822] rounded-lg p-2 mt-0.5">
+                <Phone class="w-4 h-4 text-[#FDFDFD]" />
+              </div>
+              <div>
+                <p class="text-sm font-medium text-[#FDFDFD]">Teléfono</p>
+                <a
+                  href="tel:+50612345678"
+                  class="text-[#FDFDFD]/70 hover:text-[#FF5532] transition-colors duration-300 font-light text-sm"
+                >
+                  +506 1234-5678
+                </a>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-3">
+              <div class="bg-[#FF5532] rounded-lg p-2 mt-0.5">
+                <MapPin class="w-4 h-4 text-[#FDFDFD]" />
+              </div>
+              <div>
+                <p class="text-sm font-medium text-[#FDFDFD]">Ubicación</p>
+                <p class="text-[#FDFDFD]/70 font-light text-sm">Costa Rica</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Línea inferior con copyright y botón para subir -->
+    <div class="py-8 flex flex-col md:flex-row justify-between items-center">
+      <div class="text-center md:text-left mb-4 md:mb-0">
+        <p class="text-[#FDFDFD]/60 text-sm font-light">
+          © 2024 SkyScape CR. Todos los derechos reservados.
+        </p>
+        <p class="text-[#FDFDFD]/40 text-xs font-light mt-1">
+          Diseñado con ❤️ para capturar Costa Rica desde las alturas
+        </p>
+      </div>
+
+      <!-- Botón volver arriba -->
+      <button
+        onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+        class="group bg-[#FF5532] hover:bg-[#872822] rounded-full p-3 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+        aria-label="Volver arriba"
+      >
+        <ArrowUp
+          class="w-5 h-5 text-[#FDFDFD] group-hover:translate-y-[-2px] transition-transform duration-300"
+        />
+      </button>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,518 @@
+---
+import Mail from "lucide-static/icons/mail.svg";
+import Phone from "lucide-static/icons/phone.svg";
+import MapPin from "lucide-static/icons/map-pin.svg";
+import Calendar from "lucide-static/icons/calendar.svg";
+import User from "lucide-static/icons/user.svg";
+import MessageSquare from "lucide-static/icons/message-square.svg";
+import ArrowRight from "lucide-static/icons/arrow-right.svg";
+import Clock from "lucide-static/icons/clock.svg";
+---
+
+<section
+  class="py-24 bg-[#F8F8F8] relative overflow-hidden rounded-t-[3rem] lg:rounded-t-[4rem]"
+  id="contacto"
+>
+  <!-- Elementos decorativos de fondo mejorados -->
+  <div
+    class="absolute top-20 left-16 w-36 h-36 bg-[#FF5532]/5 rounded-full blur-3xl"
+  >
+  </div>
+  <div
+    class="absolute bottom-32 right-20 w-40 h-40 bg-[#0F232E]/5 rounded-full blur-3xl"
+  >
+  </div>
+  <div
+    class="absolute top-1/3 left-1/4 w-24 h-24 bg-[#FF5532]/3 rounded-full blur-2xl animate-pulse"
+  >
+  </div>
+  <div
+    class="absolute top-1/2 right-1/5 w-2 h-2 bg-[#FF5532] rounded-full animate-pulse opacity-70"
+  >
+  </div>
+  <div
+    class="absolute bottom-1/4 left-1/6 w-1 h-1 bg-[#872822] rounded-full animate-pulse delay-700 opacity-60"
+  >
+  </div>
+  <div
+    class="absolute bottom-1/3 right-1/3 w-16 h-16 bg-[#0F232E]/4 rounded-full blur-xl"
+  >
+  </div>
+
+  <div class="container mx-auto px-6 relative z-10">
+    <!-- Header de la sección con diseño más fluido -->
+    <div class="text-center mb-20">
+      <div
+        class="inline-flex items-center space-x-3 bg-[#FDFDFD] border border-[#D9D9D9] rounded-full px-6 py-3 shadow-lg hover:shadow-xl transition-all duration-300 mb-8 backdrop-blur-sm"
+      >
+        <Calendar class="w-4 h-4 text-[#FF5532]" />
+        <span class="text-sm font-medium text-[#0F232E]">Contacto</span>
+      </div>
+
+      <h2
+        class="text-4xl lg:text-5xl font-light leading-tight tracking-tight mb-6"
+      >
+        <span class="text-[#0F232E] font-normal">Agendemos</span><br />
+        <span class="text-[#FF5532] font-semibold">tu Reunión</span>
+      </h2>
+
+      <div class="w-16 h-0.5 bg-[#FF5532] rounded-full mx-auto mb-8"></div>
+
+      <p
+        class="text-lg text-[#0F232E]/80 leading-relaxed max-w-3xl mx-auto font-light"
+      >
+        ¿Tienes un proyecto en mente? Conversemos sobre cómo podemos capturar tu
+        visión desde las alturas. Agenda una consulta gratuita y descubre las
+        posibilidades.
+      </p>
+    </div>
+
+    <div class="grid lg:grid-cols-12 gap-8 items-stretch">
+      <!-- Formulario con bordes más redondeados -->
+      <div class="lg:col-span-7">
+        <div
+          class="bg-[#FDFDFD] border border-[#D9D9D9]/50 rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 h-full flex flex-col backdrop-blur-sm"
+        >
+          <div class="mb-8">
+            <h3 class="text-2xl font-semibold text-[#0F232E] mb-2">
+              Solicita tu Consulta Gratuita
+            </h3>
+            <p class="text-[#0F232E]/70 font-light">
+              Completa el formulario y nos pondremos en contacto contigo en las
+              próximas 24 horas.
+            </p>
+          </div>
+
+          <form
+            action="https://formspree.io/f/mzzgkygy"
+            method="POST"
+            class="space-y-6 flex-1 flex flex-col"
+            novalidate
+          >
+            <!-- Nombre completo -->
+            <div class="space-y-2">
+              <label
+                for="nombre"
+                class="block text-sm font-medium text-[#0F232E]"
+              >
+                Nombre completo *
+              </label>
+              <div class="relative">
+                <div
+                  class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"
+                >
+                  <User class="h-5 w-5 text-[#0F232E]/40" />
+                </div>
+                <input
+                  type="text"
+                  id="nombre"
+                  name="nombre"
+                  required
+                  class="block w-full pl-10 pr-3 py-3 border border-[#D9D9D9] rounded-2xl shadow-sm placeholder-[#0F232E]/40 focus:outline-none focus:ring-2 focus:ring-[#FF5532] focus:border-[#FF5532] transition-colors duration-200"
+                  placeholder="Tu nombre completo"
+                  aria-describedby="nombre-error"
+                />
+              </div>
+              <div
+                id="nombre-error"
+                class="text-sm text-red-600 hidden"
+                role="alert"
+              >
+                El nombre es requerido
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div class="space-y-2">
+              <label
+                for="email"
+                class="block text-sm font-medium text-[#0F232E]"
+              >
+                Correo electrónico *
+              </label>
+              <div class="relative">
+                <div
+                  class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"
+                >
+                  <Mail class="h-5 w-5 text-[#0F232E]/40" />
+                </div>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  class="block w-full pl-10 pr-3 py-3 border border-[#D9D9D9] rounded-2xl shadow-sm placeholder-[#0F232E]/40 focus:outline-none focus:ring-2 focus:ring-[#FF5532] focus:border-[#FF5532] transition-colors duration-200"
+                  placeholder="tu@email.com"
+                  aria-describedby="email-error"
+                />
+              </div>
+              <div
+                id="email-error"
+                class="text-sm text-red-600 hidden"
+                role="alert"
+              >
+                Ingresa un email válido
+              </div>
+            </div>
+
+            <!-- Teléfono -->
+            <div class="space-y-2">
+              <label
+                for="telefono"
+                class="block text-sm font-medium text-[#0F232E]"
+              >
+                Teléfono *
+              </label>
+              <div class="relative">
+                <div
+                  class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"
+                >
+                  <Phone class="h-5 w-5 text-[#0F232E]/40" />
+                </div>
+                <input
+                  type="tel"
+                  id="telefono"
+                  name="telefono"
+                  required
+                  class="block w-full pl-10 pr-3 py-3 border border-[#D9D9D9] rounded-2xl shadow-sm placeholder-[#0F232E]/40 focus:outline-none focus:ring-2 focus:ring-[#FF5532] focus:border-[#FF5532] transition-colors duration-200"
+                  placeholder="+506 1234-5678"
+                  aria-describedby="telefono-error"
+                />
+              </div>
+              <div
+                id="telefono-error"
+                class="text-sm text-red-600 hidden"
+                role="alert"
+              >
+                El teléfono es requerido
+              </div>
+            </div>
+
+            <!-- Descripción -->
+            <div class="space-y-2 flex-1 flex flex-col">
+              <label
+                for="descripcion"
+                class="block text-sm font-medium text-[#0F232E]"
+              >
+                Descripción del proyecto *
+              </label>
+              <div class="relative flex-1 flex flex-col">
+                <div
+                  class="absolute top-3 left-3 flex items-start pointer-events-none z-10"
+                >
+                  <MessageSquare class="h-5 w-5 text-[#0F232E]/40" />
+                </div>
+                <textarea
+                  id="descripcion"
+                  name="descripcion"
+                  required
+                  class="block w-full h-full min-h-[120px] pl-10 pr-3 py-3 border border-[#D9D9D9] rounded-2xl shadow-sm placeholder-[#0F232E]/40 focus:outline-none focus:ring-2 focus:ring-[#FF5532] focus:border-[#FF5532] transition-colors duration-200 resize-none flex-1"
+                  placeholder="Describe tu proyecto, ubicación, objetivos y cualquier detalle importante..."
+                  aria-describedby="descripcion-error"></textarea>
+              </div>
+              <div
+                id="descripcion-error"
+                class="text-sm text-red-600 hidden"
+                role="alert"
+              >
+                Por favor describe tu proyecto
+              </div>
+            </div>
+
+            <!-- Campo honeypot para spam -->
+            <input
+              type="text"
+              name="_gotcha"
+              style="display: none;"
+              tabindex="-1"
+              autocomplete="off"
+            />
+
+            <!-- Botón de envío con bordes más redondeados -->
+            <button
+              type="submit"
+              class="group w-full inline-flex items-center justify-center px-8 py-4 bg-[#FF5532] text-[#FDFDFD] font-medium rounded-2xl hover:bg-[#872822] transform hover:scale-[1.02] transition-all duration-300 shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-[#FF5532] focus:ring-offset-2"
+            >
+              Enviar Solicitud
+              <ArrowRight
+                class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform"
+              />
+            </button>
+
+            <!-- Mensaje de estado -->
+            <div id="form-status" class="text-center hidden">
+              <div
+                id="success-message"
+                class="text-green-600 font-medium hidden"
+              >
+                ¡Gracias! Tu solicitud ha sido enviada. Nos pondremos en
+                contacto contigo pronto.
+              </div>
+              <div id="error-message" class="text-red-600 font-medium hidden">
+                Hubo un error al enviar el formulario. Por favor intenta
+                nuevamente.
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Información de contacto con diseño más fluido -->
+      <div class="lg:col-span-5 flex flex-col">
+        <div class="grid grid-rows-3 gap-6 h-full">
+          <!-- Información rápida -->
+          <div
+            class="bg-[#FDFDFD] border border-[#D9D9D9]/50 rounded-3xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col justify-center backdrop-blur-sm"
+          >
+            <h3 class="text-lg font-semibold text-[#0F232E] mb-4">
+              Información de Contacto
+            </h3>
+            <div class="space-y-3">
+              <div class="flex items-center space-x-3">
+                <div class="bg-[#FF5532] rounded-2xl p-2">
+                  <Mail class="w-4 h-4 text-[#FDFDFD]" />
+                </div>
+                <div>
+                  <div class="text-sm font-medium text-[#0F232E]">Email</div>
+                  <div class="text-xs text-[#0F232E]/70">
+                    info@skyscape-cr.com
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-center space-x-3">
+                <div class="bg-[#0F232E] rounded-2xl p-2">
+                  <Phone class="w-4 h-4 text-[#FDFDFD]" />
+                </div>
+                <div>
+                  <div class="text-sm font-medium text-[#0F232E]">Teléfono</div>
+                  <div class="text-xs text-[#0F232E]/70">+506 1234-5678</div>
+                </div>
+              </div>
+              <div class="flex items-center space-x-3">
+                <div class="bg-[#872822] rounded-2xl p-2">
+                  <MapPin class="w-4 h-4 text-[#FDFDFD]" />
+                </div>
+                <div>
+                  <div class="text-sm font-medium text-[#0F232E]">
+                    Ubicación
+                  </div>
+                  <div class="text-xs text-[#0F232E]/70">Costa Rica</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Horarios de atención -->
+          <div
+            class="bg-[#FF5532] rounded-3xl p-6 text-[#FDFDFD] shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col justify-center"
+          >
+            <div class="flex items-center space-x-3 mb-3">
+              <Clock class="w-5 h-5" />
+              <h3 class="text-lg font-semibold">Horarios</h3>
+            </div>
+            <div class="space-y-2 text-sm">
+              <div class="flex justify-between">
+                <span>Lun - Vie</span>
+                <span>8:00 AM - 6:00 PM</span>
+              </div>
+              <div class="flex justify-between">
+                <span>Sábados</span>
+                <span>9:00 AM - 2:00 PM</span>
+              </div>
+              <div class="flex justify-between">
+                <span>Domingos</span>
+                <span>Solo emergencias</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tiempo de respuesta -->
+          <div
+            class="bg-[#FDFDFD] border border-[#D9D9D9]/50 rounded-3xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col justify-center backdrop-blur-sm"
+          >
+            <h3 class="text-lg font-semibold text-[#0F232E] mb-3">
+              ¿Qué puedes esperar?
+            </h3>
+            <div class="space-y-2 text-sm">
+              <div class="flex items-start space-x-2">
+                <div
+                  class="w-1.5 h-1.5 bg-[#FF5532] rounded-full mt-2 flex-shrink-0"
+                >
+                </div>
+                <span class="text-[#0F232E]/70">
+                  <strong class="text-[#0F232E]">Respuesta rápida:</strong> En menos
+                  de 24 horas
+                </span>
+              </div>
+              <div class="flex items-start space-x-2">
+                <div
+                  class="w-1.5 h-1.5 bg-[#FF5532] rounded-full mt-2 flex-shrink-0"
+                >
+                </div>
+                <span class="text-[#0F232E]/70">
+                  <strong class="text-[#0F232E]">Consulta gratuita:</strong> Sin
+                  compromiso
+                </span>
+              </div>
+              <div class="flex items-start space-x-2">
+                <div
+                  class="w-1.5 h-1.5 bg-[#FF5532] rounded-full mt-2 flex-shrink-0"
+                >
+                </div>
+                <span class="text-[#0F232E]/70">
+                  <strong class="text-[#0F232E]"
+                    >Propuesta personalizada:</strong
+                  > A tu medida
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Validación y manejo del formulario
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector("form");
+    const statusDiv = document.getElementById("form-status");
+    const successMessage = document.getElementById("success-message");
+    const errorMessage = document.getElementById("error-message");
+
+    if (!form || !statusDiv || !successMessage || !errorMessage) {
+      console.error("Elementos del formulario no encontrados");
+      return;
+    }
+
+    // Validación en tiempo real
+    const requiredFields = ["nombre", "email", "telefono", "descripcion"];
+
+    requiredFields.forEach((fieldId) => {
+      const field = document.getElementById(fieldId) as
+        | HTMLInputElement
+        | HTMLTextAreaElement;
+      const errorDiv = document.getElementById(
+        fieldId + "-error"
+      ) as HTMLElement;
+
+      if (!field || !errorDiv) return; // Skip if elements don't exist
+
+      field.addEventListener("blur", function () {
+        validateField(field, errorDiv);
+      });
+
+      field.addEventListener("input", function () {
+        if (errorDiv.classList.contains("block")) {
+          validateField(field, errorDiv);
+        }
+      });
+    });
+
+    function validateField(
+      field: HTMLInputElement | HTMLTextAreaElement,
+      errorDiv: HTMLElement
+    ) {
+      const value = field.value.trim();
+      let isValid = true;
+
+      if (field.hasAttribute("required") && !value) {
+        isValid = false;
+      } else if (field.type === "email" && value && !isValidEmail(value)) {
+        isValid = false;
+        errorDiv.textContent = "Ingresa un email válido";
+      }
+
+      if (isValid) {
+        errorDiv.classList.add("hidden");
+        errorDiv.classList.remove("block");
+        field.classList.remove("border-red-500");
+        field.classList.add("border-[#D9D9D9]");
+      } else {
+        errorDiv.classList.remove("hidden");
+        errorDiv.classList.add("block");
+        field.classList.add("border-red-500");
+        field.classList.remove("border-[#D9D9D9]");
+      }
+
+      return isValid;
+    }
+
+    function isValidEmail(email: string) {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return emailRegex.test(email);
+    }
+
+    // Manejo del envío del formulario
+    form.addEventListener("submit", async function (e) {
+      e.preventDefault();
+
+      // Validar todos los campos requeridos
+      let isFormValid = true;
+      requiredFields.forEach((fieldId) => {
+        const field = document.getElementById(fieldId) as
+          | HTMLInputElement
+          | HTMLTextAreaElement;
+        const errorDiv = document.getElementById(
+          fieldId + "-error"
+        ) as HTMLElement;
+        if (field && errorDiv && !validateField(field, errorDiv)) {
+          isFormValid = false;
+        }
+      });
+
+      if (!isFormValid) {
+        return;
+      }
+
+      const submitButton = form.querySelector('button[type="submit"]');
+      if (!submitButton) return;
+
+      const originalText = submitButton.innerHTML;
+
+      // Mostrar estado de carga
+      submitButton.innerHTML = "Enviando...";
+      (submitButton as HTMLButtonElement).disabled = true;
+
+      try {
+        const formData = new FormData(form);
+        const response = await fetch(form.action, {
+          method: "POST",
+          body: formData,
+          headers: {
+            Accept: "application/json",
+          },
+        });
+
+        if (response.ok) {
+          statusDiv.classList.remove("hidden");
+          successMessage.classList.remove("hidden");
+          errorMessage.classList.add("hidden");
+          form.reset();
+
+          // Ocultar mensaje después de 5 segundos
+          setTimeout(() => {
+            statusDiv.classList.add("hidden");
+            successMessage.classList.add("hidden");
+          }, 5000);
+        } else {
+          throw new Error("Error en el envío");
+        }
+      } catch (error) {
+        statusDiv.classList.remove("hidden");
+        errorMessage.classList.remove("hidden");
+        successMessage.classList.add("hidden");
+
+        // Ocultar mensaje después de 5 segundos
+        setTimeout(() => {
+          statusDiv.classList.add("hidden");
+          errorMessage.classList.add("hidden");
+        }, 5000);
+      } finally {
+        submitButton.innerHTML = originalText;
+        (submitButton as HTMLButtonElement).disabled = false;
+      }
+    });
+  });
+</script>
